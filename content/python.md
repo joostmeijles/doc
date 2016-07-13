@@ -1,0 +1,6 @@
+---
+title: Python
+menu: main
+---
+
+- Style guide: https://www.python.org/dev/peps/pep-0008/
