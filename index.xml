@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My documentation page</title>
+    <link>https://joostmeijles.github.io/doc/</link>
+    <description>Recent content on My documentation page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://joostmeijles.github.io/doc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Debian</title>
+      <link>https://joostmeijles.github.io/doc/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/debian/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.debian.org&#34;&gt;Debian&lt;/a&gt; is a free operating system (OS) for your computer.
+Debian package management is for example used for &lt;a href=&#34;http://www.ubuntu.com&#34;&gt;Ubuntu&lt;/a&gt; packages.&lt;/p&gt;
+
+&lt;p&gt;To show package contents:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ dpkg -c &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To show package meta info:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ dpkg-deb -I &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://joostmeijles.github.io/doc/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/docker/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.docker.com&#34;&gt;Docker&lt;/a&gt; is the world’s leading software containerization platform.&lt;/p&gt;
+
+&lt;p&gt;To let Docker use another path for the images and containers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ vim /etc/default/docker 
+vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To interactively run a custom program, e.g. /bin/bash, in a running container:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker exec -ti &amp;lt;container&amp;gt; /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To obtain the host name and port number of a container:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker inspect --format=&#39;{{(index (index .NetworkSettings.Ports &amp;quot;80/tcp&amp;quot;) 0).HostPort}}&#39; &amp;lt;container&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To link container together:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker run --name &amp;lt;container&amp;gt; --link &amp;lt;container&amp;gt;:&amp;lt;image&amp;gt; -P -d &amp;lt;image&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To list all running and stopped containers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps -a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A large sheet with common Docker commands can be found &lt;a href=&#34;https://github.com/wsargent/docker-cheat-sheet&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compose multiple docker containers: &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;http://docs.docker.com/compose/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Docker Kitematic: GUI for Docker containers (&lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;https://github.com/kitematic/kitematic/issues/49&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GDB</title>
+      <link>https://joostmeijles.github.io/doc/gdb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/gdb/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Do not handle signals:
+&lt;code&gt;
+handle SIGPIPE nostop noprint pass
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://joostmeijles.github.io/doc/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/git/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Fixup and squash: &lt;a href=&#34;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&#34;&gt;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Git commands: &lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34;&gt;http://orga.cat/posts/most-useful-git-commands&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>https://joostmeijles.github.io/doc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/</guid>
+      <description>
+
+&lt;h2 id=&#34;documents&#34;&gt;Documents&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;/data/newgroups/Development_and_Innovation/Projects/12-007-Sensor_Fusion_Maps/01_Project_Management/01_PMP_Project_Backlog_Sprints/02_Sprints/Sprint_22&lt;/li&gt;
+&lt;li&gt;/data/newgroups/Development_and_Innovation/Projects/14-014-SFM_NavInfo_NewGeom/03_Story_Designs/SFM_Sensor_Clustering_Design.v0.4.09042015.odt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;articles&#34;&gt;Articles&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying&#34;&gt;https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines&#34;&gt;http://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mongo DB</title>
+      <link>https://joostmeijles.github.io/doc/mongo-db/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/mongo-db/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.mongodb.org&#34;&gt;MongoDB&lt;/a&gt; (from humongous) is a free and open-source cross-platform document-oriented database.
+Classified as a NoSQL database, MongoDB avoids the traditional table-based relational database
+structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON),
+making the integration of data in certain types of applications easier and faster.&lt;/p&gt;
+
+&lt;p&gt;To copy a database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongo&amp;gt; db.copyDatabase(&amp;quot;from-dbname&amp;quot;,&amp;quot;to-dbname&amp;quot;,&amp;quot;from.host.nl&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://joostmeijles.github.io/doc/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/python/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Style guide: &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;https://www.python.org/dev/peps/pep-0008/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SSL</title>
+      <link>https://joostmeijles.github.io/doc/ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/ssl/</guid>
+      <description>&lt;p&gt;SSL (Secure Sockets Layer) is the standard security technology for establishing
+an encrypted link between a web server and a browser. This link ensures that all
+data passed between the web server and browsers remain private and integral.&lt;/p&gt;
+
+&lt;p&gt;To create a SSL bundle (each certificate indicates its own dependent certificate):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat server.crt intermediate.crt root.crt &amp;gt; ssl-bundle.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To verify a SSL certificate setup (note that openssl requires to have the root certificate locally, otherwise you get error 19 (self signed &amp;hellip;)):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-R1.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How to debug certificates can be read &lt;a href=&#34;http://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How to setup SSL with Nginx can be found &lt;a href=&#34;https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/789/37/certificate-installation-nginx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spatialite</title>
+      <link>https://joostmeijles.github.io/doc/spatialite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/spatialite/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/dh_clean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/spatial_clean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/CreateSpatialIndex&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sqlite</title>
+      <link>https://joostmeijles.github.io/doc/sqlite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/sqlite/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sq3dh&lt;/code&gt; SqLite console&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sqlgui&lt;/code&gt; SpatiaLite gui&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select * from dh_metadata LIMIT 2;&lt;/code&gt; Show DHive Metadata&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.schema dh_metadata&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;update dh_metadata set MetaValue = 2.264 where MetaTag = &#39;DH_VERSION&#39;;&lt;/code&gt; Set DHive version&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.exit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select * from dh_mde where EnumGroup = &amp;quot;VIMP&amp;quot;;&lt;/code&gt; Select enums from VIMP (Vehicles impacted group), see DHive_Model/h_dh.h&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.header on&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;attach &amp;quot;./deu_msp_vw_its_ts_20150218.dh.sq3&amp;quot; as ref;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select * from sfm_speedlimit_matches sign, dh_sms sms, dh_ssa ssa where sign.sms_id=sms.id and sms.id=ssa.smsid and ssa.attributename=201 and ssa.attributevalue=209;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select SMSId  from ref.dh_ssa where AttributeName = 201 AND AttributeValue = 209;&lt;/code&gt; Select SMS ids for attribute H_DH_SSA_NAME_SIGN_CONSTRAINT with value H_DH_SSA_VALUE_SIGN_CONSTRAINT_WHEN_WET&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://joostmeijles.github.io/doc/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/testing/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Run regression test:
+&lt;code&gt;
+./start_regression -bundle dev_telematics -ref dev_telematics_20150529 -test dev_telematics_latest` Run regression test locally
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SFM definition of done: &lt;a href=&#34;http://dokuwiki.mapscape.nl/doku.php?id=dev:sfm_telematics_dod&#34;&gt;http://dokuwiki.mapscape.nl/doku.php?id=dev:sfm_telematics_dod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HTML response codes: &lt;a href=&#34;http://httpstatus.es/&#34;&gt;http://httpstatus.es/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Redirect to stdout and terminate after 1 second after connection is idle:
+&lt;code&gt;
+sudo socat -T1 TCP4-LISTEN:8080,reuseaddr STDOUT
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show local network traffic on port 8080:
+&lt;code&gt;
+sudo tcpflow -Ci lo port 8080
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show local network traffic matching PUT:
+&lt;code&gt;
+sudo ngrep -d lo &#39;^PUT&#39;
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TCP dump:
+&lt;code&gt;
+sudo tcpdump -i lo &#39;port 80&#39; -w -
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Wireshark:
+&lt;code&gt;
+sudo apt-get install wireshark
+sudo dpkg-reconfigure wireshark-common
+sudo adduser $USER wireshark
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Wireshark ZeroMQ: &lt;a href=&#34;https://github.com/whitequark/zmtp-wireshark&#34;&gt;https://github.com/whitequark/zmtp-wireshark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GMock: &lt;a href=&#34;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&#34;&gt;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://joostmeijles.github.io/doc/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/tools/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;List projects:
+&lt;code&gt;
+cmsutil list
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Generate Eclipse xml includes:
+&lt;code&gt;
+/data/users/public/reinco.hof/cms2ecl distr
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set Java VM memory:
+&lt;code&gt;
+/etc/eclipse.ini
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check mounts:
+&lt;code&gt;
+df -h
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Mapview:
+&lt;code&gt;
+mv2 [-r latest]
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Regression tests:
+&lt;code&gt;
+~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Regression test results:
+&lt;code&gt;
+/data/users/attreg/regconv/dev_telematics
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/data/id/release/&lt;/code&gt; Releases; .convert script will search here for matching bundle/product&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export CVTOOL_DEBUG_COMMAND=&amp;quot;valgrind --leak-check=full --show-reachable=yes --track-origins=yes {EXE} {ARGS} 2&amp;gt; {EXE}.valgrind&lt;/code&gt; Wrap command around every program started by Dakota (CV) tool (David Ingamells)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export CVTOOL_DEBUG_PROCESSES=&amp;quot;SFMBuildTraces&amp;quot;&lt;/code&gt; Specify which process to debug, needs to be set in combination with Dakota Debug wrapper command&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh win7vm06&lt;/code&gt; Build on Windows&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh msbld614&lt;/code&gt; Build on Ubuntu 14.04&lt;/li&gt;
+&lt;li&gt;To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
+&lt;code&gt;gdb&amp;gt; set environment LD_PRELOAD &amp;lt;librarytodebug.so&amp;gt;&lt;/code&gt;
+&lt;code&gt;gdb&amp;gt; set environment LD_LIBRARY_PATH &amp;lt;library path&amp;gt;&lt;/code&gt;
+&lt;code&gt;gdb&amp;gt; dir &amp;lt;source directory&amp;gt;&lt;/code&gt; This seems to be optional
+Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the so.&lt;/li&gt;
+&lt;li&gt;GDB sometimes hangs upon start, to reset GDB: &lt;code&gt;rm -Rf ~/.ddd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set breakpoint at catch in GDB: &lt;code&gt;catch catch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;rsync -ave ssh from-machine:/dir/ /to/dir/&lt;/li&gt;
+&lt;li&gt;Determine changes between releases:
+&lt;code&gt;
+/data/id/release/VVVTools/TestTools_latest/x86_64_Ubuntu_14.04/MapTestRegressionTest/scripts/gettaskchanges.sh NDS/nds_toolkit_20160326 NDS/nds_toolkit_20160329 --browser
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Various</title>
+      <link>https://joostmeijles.github.io/doc/various/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/various/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Embed text in object file: &lt;a href=&#34;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&#34;&gt;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;grep -A1 [text] [file]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;du -hs * | sort -h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overlapping static instances: &lt;a href=&#34;http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap&#34;&gt;http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Controlling symbol visibility: &lt;a href=&#34;http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/&#34;&gt;http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/&lt;/a&gt; and &lt;a href=&#34;http://www.akkadia.org/drepper/dsohowto.pdfdud&#34;&gt;http://www.akkadia.org/drepper/dsohowto.pdfdud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enabling core dumps: &lt;a href=&#34;http://www.akadia.com/services/ora_enable_core.html&#34;&gt;http://www.akadia.com/services/ora_enable_core.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show latest cron jobs
+&lt;code&gt;
+sudo grep -i cron /var/log/syslog|tail -2
+&lt;/code&gt;
+-
+&lt;code&gt;
+sudo apt-get -o Dpkg::Options::=&amp;quot;--force-overwrite&amp;quot; install &amp;lt;package name&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Firewall setup: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server&lt;/a&gt;
+&lt;code&gt;
+sudo ufw
+&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Activate newly created users group:
+&lt;code&gt;
+newgrp docker
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Easy memory usage overview: &lt;a href=&#34;https://github.com/crquan/coremem&#34;&gt;https://github.com/crquan/coremem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C10K discussion: &lt;a href=&#34;http://www.kegel.com/c10k.html#nb.edge&#34;&gt;http://www.kegel.com/c10k.html#nb.edge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;List open file descriptors per pid:
+&lt;code&gt;
+lsof -p &amp;lt;pid&amp;gt;
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Number of open files on Linux: &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&#34;&gt;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;To allow su to set ulimit, edit and uncomment pam_limits.so in: /etc/pam.d/su&lt;/li&gt;
+&lt;li&gt;Set ulimits system wide, note that root permissions need to be set explicitly: /etc/security/limits.conf&lt;/li&gt;
+&lt;li&gt;Lookup open sockets:
+&lt;code&gt;
+while [ 1 ]; do sudo lsof -p `pidof &amp;lt;proc name&amp;gt;` | grep ESTABLISHED | wc; sysctl fs.file-nr; sleep 1; done
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TCP backlog in Linux: &lt;a href=&#34;http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html&#34;&gt;http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TCP TIME_WAIT: &lt;a href=&#34;http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html&#34;&gt;http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TCP_NODELAY: &lt;a href=&#34;http://www.ibase.ru/devinfo/tcp_nodelay.txt&#34;&gt;http://www.ibase.ru/devinfo/tcp_nodelay.txt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C10K problem: &lt;a href=&#34;http://www.kegel.com/c10k.html&#34;&gt;http://www.kegel.com/c10k.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Some benchmark rules: &lt;a href=&#34;https://www.mnot.net/blog/2011/05/18/http_benchmark_rules&#34;&gt;https://www.mnot.net/blog/2011/05/18/http_benchmark_rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ps cpu% vs top cpu%: &lt;a href=&#34;http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result&#34;&gt;http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Trace function calls: &lt;a href=&#34;http://ndevilla.free.fr/etrace/&#34;&gt;http://ndevilla.free.fr/etrace/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set UTF-8 as default for Gnome terminal:
+&lt;code&gt;
+gconftool --set --type=string /apps/gnome-terminal/profiles/Default/encoding en_US.UTF-8
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Socket reuse explained: &lt;a href=&#34;http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t&#34;&gt;http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP workgroup page: &lt;a href=&#34;http://httpwg.org/&#34;&gt;http://httpwg.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Change SUDO behavior:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; visudo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add to last line:
+&lt;code&gt;joost.meijles ALL=(ALL) NOPASSWD:ALL&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SSHFS: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CCache with Memcached: &lt;a href=&#34;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&#34;&gt;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>https://joostmeijles.github.io/doc/wireshark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/wireshark/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.wireshark.org&#34;&gt;Wireshark&lt;/a&gt; is the world&amp;rsquo;s foremost network protocol analyzer.
+It lets you see what&amp;rsquo;s happening on your network at a microscopic level.
+It is the de facto (and often de jure) standard across many industries and educational institutions.&lt;/p&gt;
+
+&lt;p&gt;Enable non-root users to use network interfaces:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo dpkg-reconfigure wireshark-common
+$ sudo adduser $USER wireshark
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

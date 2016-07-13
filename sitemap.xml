@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/debian/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/gdb/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/mongo-db/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/ssl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/spatialite/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/sqlite/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/testing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/various/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/wireshark/</loc>
+  </url>
+  
+</urlset>
