@@ -53,7 +53,7 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 &lt;pre&gt;&lt;code&gt;$ docker inspect --format=&#39;{{(index (index .NetworkSettings.Ports &amp;quot;80/tcp&amp;quot;) 0).HostPort}}&#39; &amp;lt;container&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;To link container together:&lt;/p&gt;
+&lt;p&gt;To link containers together:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ docker run --name &amp;lt;container&amp;gt; --link &amp;lt;container&amp;gt;:&amp;lt;image&amp;gt; -P -d &amp;lt;image&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -65,10 +65,9 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 
 &lt;p&gt;A large sheet with common Docker commands can be found &lt;a href=&#34;https://github.com/wsargent/docker-cheat-sheet&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Compose multiple docker containers: &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;http://docs.docker.com/compose/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Docker Kitematic: GUI for Docker containers (&lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;https://github.com/kitematic/kitematic/issues/49&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Use &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;Docker Compose&lt;/a&gt; to run multiple containers together.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
 </description>
     </item>
     

@@ -43,7 +43,7 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 <pre><code>$ docker inspect --format='{{(index (index .NetworkSettings.Ports &quot;80/tcp&quot;) 0).HostPort}}' &lt;container&gt;
 </code></pre>
 
-<p>To link container together:</p>
+<p>To link containers together:</p>
 
 <pre><code>$ docker run --name &lt;container&gt; --link &lt;container&gt;:&lt;image&gt; -P -d &lt;image&gt;
 </code></pre>
@@ -55,10 +55,9 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 
 <p>A large sheet with common Docker commands can be found <a href="https://github.com/wsargent/docker-cheat-sheet">here</a>.</p>
 
-<ul>
-<li>Compose multiple docker containers: <a href="http://docs.docker.com/compose/">http://docs.docker.com/compose/</a></li>
-<li>Docker Kitematic: GUI for Docker containers (<a href="https://github.com/kitematic/kitematic/issues/49">https://github.com/kitematic/kitematic/issues/49</a>)</li>
-</ul>
+<p>Use <a href="http://docs.docker.com/compose/">Docker Compose</a> to run multiple containers together.</p>
+
+<p><a href="https://kitematic.com">Docker Kitematic</a>: a GUI for Docker containers. <a href="https://github.com/kitematic/kitematic/issues/49">Linux support</a> still pending?</p>
 
 
 
