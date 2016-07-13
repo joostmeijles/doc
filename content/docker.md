@@ -20,7 +20,7 @@ To obtain the host name and port number of a container:
 $ docker inspect --format='{{(index (index .NetworkSettings.Ports "80/tcp") 0).HostPort}}' <container>
 ```
 
-To link container together:
+To link containers together:
 ```
 $ docker run --name <container> --link <container>:<image> -P -d <image>
 ```
@@ -32,5 +32,6 @@ $ docker ps -a
 
 A large sheet with common Docker commands can be found [here](https://github.com/wsargent/docker-cheat-sheet).
 
-- Compose multiple docker containers: http://docs.docker.com/compose/
-- Docker Kitematic: GUI for Docker containers (https://github.com/kitematic/kitematic/issues/49)
+Use [Docker Compose](http://docs.docker.com/compose/) to run multiple containers together.
+
+[Docker Kitematic](https://kitematic.com): a GUI for Docker containers. [Linux support](https://github.com/kitematic/kitematic/issues/49) still pending? 
