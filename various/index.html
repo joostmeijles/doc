@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head lang="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+	
+	<meta name="generator" content="Hugo 0.16" />
+	
+	<title>Various &mdash; My documentation page</title>
+	
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
+
+	
+
+	<link rel="shortcut icon" href="https://joostmeijles.github.io/doc/favicon.ico" type="image/x-icon"/>
+</head>
+
+	<body role="document">
+		<div class="document">
+			<div class="documentwrapper">
+				<div class="bodywrapper">
+					<div class="body" role="main">
+						
+	<h1>Various</h1>
+	
+	<ul>
+<li>Embed text in object file: <a href="http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967">http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967</a></li>
+<li><code>grep -A1 [text] [file]</code></li>
+<li><code>du -hs * | sort -h</code></li>
+<li>Overlapping static instances: <a href="http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap">http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap</a></li>
+<li>Controlling symbol visibility: <a href="http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/">http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/</a> and <a href="http://www.akkadia.org/drepper/dsohowto.pdfdud">http://www.akkadia.org/drepper/dsohowto.pdfdud</a></li>
+<li>Enabling core dumps: <a href="http://www.akadia.com/services/ora_enable_core.html">http://www.akadia.com/services/ora_enable_core.html</a></li>
+<li>Show latest cron jobs
+<code>
+sudo grep -i cron /var/log/syslog|tail -2
+</code>
+-
+<code>
+sudo apt-get -o Dpkg::Options::=&quot;--force-overwrite&quot; install &lt;package name&gt;
+</code></li>
+<li>Firewall setup: <a href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server">https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server</a>
+<code>
+sudo ufw
+</code><br /></li>
+<li>Activate newly created users group:
+<code>
+newgrp docker
+</code></li>
+<li>Easy memory usage overview: <a href="https://github.com/crquan/coremem">https://github.com/crquan/coremem</a></li>
+<li>C10K discussion: <a href="http://www.kegel.com/c10k.html#nb.edge">http://www.kegel.com/c10k.html#nb.edge</a></li>
+<li>List open file descriptors per pid:
+<code>
+lsof -p &lt;pid&gt;
+</code></li>
+<li>Number of open files on Linux: <a href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/</a></li>
+<li>To allow su to set ulimit, edit and uncomment pam_limits.so in: /etc/pam.d/su</li>
+<li>Set ulimits system wide, note that root permissions need to be set explicitly: /etc/security/limits.conf</li>
+<li>Lookup open sockets:
+<code>
+while [ 1 ]; do sudo lsof -p `pidof &lt;proc name&gt;` | grep ESTABLISHED | wc; sysctl fs.file-nr; sleep 1; done
+</code></li>
+<li>TCP backlog in Linux: <a href="http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html">http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html</a></li>
+<li>TCP TIME_WAIT: <a href="http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html">http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html</a></li>
+<li>TCP_NODELAY: <a href="http://www.ibase.ru/devinfo/tcp_nodelay.txt">http://www.ibase.ru/devinfo/tcp_nodelay.txt</a></li>
+<li>C10K problem: <a href="http://www.kegel.com/c10k.html">http://www.kegel.com/c10k.html</a></li>
+<li>Some benchmark rules: <a href="https://www.mnot.net/blog/2011/05/18/http_benchmark_rules">https://www.mnot.net/blog/2011/05/18/http_benchmark_rules</a></li>
+<li>ps cpu% vs top cpu%: <a href="http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result">http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result</a></li>
+<li>Trace function calls: <a href="http://ndevilla.free.fr/etrace/">http://ndevilla.free.fr/etrace/</a></li>
+<li>Set UTF-8 as default for Gnome terminal:
+<code>
+gconftool --set --type=string /apps/gnome-terminal/profiles/Default/encoding en_US.UTF-8
+</code></li>
+<li>Socket reuse explained: <a href="http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t">http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t</a></li>
+
+<li><p>HTTP workgroup page: <a href="http://httpwg.org/">http://httpwg.org/</a></p></li>
+
+<li><p>Change SUDO behavior:</p>
+
+<pre><code>&gt; visudo
+</code></pre>
+
+<p>Add to last line:
+<code>joost.meijles ALL=(ALL) NOPASSWD:ALL</code></p></li>
+
+<li><p>SSHFS: <a href="https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh">https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh</a></p></li>
+</ul>
+
+<p>CCache with Memcached: <a href="https://gist.github.com/itensionanders/2bd0056027f8308d4cd8">https://gist.github.com/itensionanders/2bd0056027f8308d4cd8</a></p>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+	<div class="sphinxsidebarwrapper">
+		<p class="logo">
+			<a href="https://joostmeijles.github.io/doc/">
+				<img class="logo" src="https://joostmeijles.github.io/doc/favicon.ico" alt="Logo"/>
+				<h1 class="logo logo-name"></h1>
+			</a>
+		</p>
+		
+		
+
+		
+		
+
+		
+
+<h3>Navigation</h3>
+<ul>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/debian/">Debian</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/docker/">Docker</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/gdb/">GDB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/git/">Git</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/mongo-db/">Mongo DB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/python/">Python</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/ssl/">SSL</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/spatialite/">Spatialite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/testing/">Testing</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/tools/">Tools</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/various/">Various</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/wireshark/">Wireshark</a>
+	</li>
+	
+</ul>
+
+
+		
+
+	</div>
+</div>
+<div class="clearer"></div>
+</div>
+			<div class="footer">
+	&copy; 2016 <a href="http://joost.meijl.es">Joost Meijles</a>
+	|
+	Powered by <a href="http://gohugo.io/">Hugo 0.16</a>
+	&amp; <a href="https://github.com/digitalcraftsman/hugo-alabaster-theme">Alabaster</a>
+	
+</div>
+
+
+
+
+			
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+			<script>hljs.initHighlightingOnLoad();</script>
+			
+
+			
+		</div>
+	</body>
+</html>

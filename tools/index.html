@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head lang="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+	
+	<meta name="generator" content="Hugo 0.16" />
+	
+	<title>Tools &mdash; My documentation page</title>
+	
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
+
+	
+
+	<link rel="shortcut icon" href="https://joostmeijles.github.io/doc/favicon.ico" type="image/x-icon"/>
+</head>
+
+	<body role="document">
+		<div class="document">
+			<div class="documentwrapper">
+				<div class="bodywrapper">
+					<div class="body" role="main">
+						
+	<h1>Tools</h1>
+	
+	<ul>
+<li>List projects:
+<code>
+cmsutil list
+</code></li>
+<li>Generate Eclipse xml includes:
+<code>
+/data/users/public/reinco.hof/cms2ecl distr
+</code></li>
+<li>Set Java VM memory:
+<code>
+/etc/eclipse.ini
+</code></li>
+<li>Check mounts:
+<code>
+df -h
+</code></li>
+<li>Mapview:
+<code>
+mv2 [-r latest]
+</code></li>
+<li>Regression tests:
+<code>
+~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
+</code></li>
+<li>Regression test results:
+<code>
+/data/users/attreg/regconv/dev_telematics
+</code></li>
+<li><code>/data/id/release/</code> Releases; .convert script will search here for matching bundle/product</li>
+<li><code>export CVTOOL_DEBUG_COMMAND=&quot;valgrind --leak-check=full --show-reachable=yes --track-origins=yes {EXE} {ARGS} 2&gt; {EXE}.valgrind</code> Wrap command around every program started by Dakota (CV) tool (David Ingamells)</li>
+<li><code>export CVTOOL_DEBUG_PROCESSES=&quot;SFMBuildTraces&quot;</code> Specify which process to debug, needs to be set in combination with Dakota Debug wrapper command</li>
+<li><code>ssh win7vm06</code> Build on Windows</li>
+<li><code>ssh msbld614</code> Build on Ubuntu 14.04</li>
+<li>To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
+<code>gdb&gt; set environment LD_PRELOAD &lt;librarytodebug.so&gt;</code>
+<code>gdb&gt; set environment LD_LIBRARY_PATH &lt;library path&gt;</code>
+<code>gdb&gt; dir &lt;source directory&gt;</code> This seems to be optional
+Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the so.</li>
+<li>GDB sometimes hangs upon start, to reset GDB: <code>rm -Rf ~/.ddd</code></li>
+<li>Set breakpoint at catch in GDB: <code>catch catch</code></li>
+<li>rsync -ave ssh from-machine:/dir/ /to/dir/</li>
+<li>Determine changes between releases:
+<code>
+/data/id/release/VVVTools/TestTools_latest/x86_64_Ubuntu_14.04/MapTestRegressionTest/scripts/gettaskchanges.sh NDS/nds_toolkit_20160326 NDS/nds_toolkit_20160329 --browser
+</code></li>
+</ul>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+	<div class="sphinxsidebarwrapper">
+		<p class="logo">
+			<a href="https://joostmeijles.github.io/doc/">
+				<img class="logo" src="https://joostmeijles.github.io/doc/favicon.ico" alt="Logo"/>
+				<h1 class="logo logo-name"></h1>
+			</a>
+		</p>
+		
+		
+
+		
+		
+
+		
+
+<h3>Navigation</h3>
+<ul>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/debian/">Debian</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/docker/">Docker</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/gdb/">GDB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/git/">Git</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/mongo-db/">Mongo DB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/python/">Python</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/ssl/">SSL</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/spatialite/">Spatialite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/testing/">Testing</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/tools/">Tools</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/various/">Various</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/wireshark/">Wireshark</a>
+	</li>
+	
+</ul>
+
+
+		
+
+	</div>
+</div>
+<div class="clearer"></div>
+</div>
+			<div class="footer">
+	&copy; 2016 <a href="http://joost.meijl.es">Joost Meijles</a>
+	|
+	Powered by <a href="http://gohugo.io/">Hugo 0.16</a>
+	&amp; <a href="https://github.com/digitalcraftsman/hugo-alabaster-theme">Alabaster</a>
+	
+</div>
+
+
+
+
+			
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+			<script>hljs.initHighlightingOnLoad();</script>
+			
+
+			
+		</div>
+	</body>
+</html>

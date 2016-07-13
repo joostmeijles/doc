@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head lang="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+	
+	<meta name="generator" content="Hugo 0.16" />
+	
+	<title>Docker &mdash; My documentation page</title>
+	
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
+	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
+
+	
+
+	<link rel="shortcut icon" href="https://joostmeijles.github.io/doc/favicon.ico" type="image/x-icon"/>
+</head>
+
+	<body role="document">
+		<div class="document">
+			<div class="documentwrapper">
+				<div class="bodywrapper">
+					<div class="body" role="main">
+						
+	<h1>Docker</h1>
+	
+	<p><a href="http://www.docker.com">Docker</a> is the world’s leading software containerization platform.</p>
+
+<p>To let Docker use another path for the images and containers:</p>
+
+<pre><code>$ vim /etc/default/docker 
+vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
+</code></pre>
+
+<p>To interactively run a custom program, e.g. /bin/bash, in a running container:</p>
+
+<pre><code>$ docker exec -ti &lt;container&gt; /bin/bash
+</code></pre>
+
+<p>To obtain the host name and port number of a container:</p>
+
+<pre><code>$ docker inspect --format='{{(index (index .NetworkSettings.Ports &quot;80/tcp&quot;) 0).HostPort}}' &lt;container&gt;
+</code></pre>
+
+<p>To link container together:</p>
+
+<pre><code>$ docker run --name &lt;container&gt; --link &lt;container&gt;:&lt;image&gt; -P -d &lt;image&gt;
+</code></pre>
+
+<p>To list all running and stopped containers:</p>
+
+<pre><code>$ docker ps -a
+</code></pre>
+
+<p>A large sheet with common Docker commands can be found <a href="https://github.com/wsargent/docker-cheat-sheet">here</a>.</p>
+
+<ul>
+<li>Compose multiple docker containers: <a href="http://docs.docker.com/compose/">http://docs.docker.com/compose/</a></li>
+<li>Docker Kitematic: GUI for Docker containers (<a href="https://github.com/kitematic/kitematic/issues/49">https://github.com/kitematic/kitematic/issues/49</a>)</li>
+</ul>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+	<div class="sphinxsidebarwrapper">
+		<p class="logo">
+			<a href="https://joostmeijles.github.io/doc/">
+				<img class="logo" src="https://joostmeijles.github.io/doc/favicon.ico" alt="Logo"/>
+				<h1 class="logo logo-name"></h1>
+			</a>
+		</p>
+		
+		
+
+		
+		
+
+		
+
+<h3>Navigation</h3>
+<ul>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/debian/">Debian</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/docker/">Docker</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/gdb/">GDB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/git/">Git</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/mongo-db/">Mongo DB</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/python/">Python</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/ssl/">SSL</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/spatialite/">Spatialite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/testing/">Testing</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/tools/">Tools</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/various/">Various</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/wireshark/">Wireshark</a>
+	</li>
+	
+</ul>
+
+
+		
+
+	</div>
+</div>
+<div class="clearer"></div>
+</div>
+			<div class="footer">
+	&copy; 2016 <a href="http://joost.meijl.es">Joost Meijles</a>
+	|
+	Powered by <a href="http://gohugo.io/">Hugo 0.16</a>
+	&amp; <a href="https://github.com/digitalcraftsman/hugo-alabaster-theme">Alabaster</a>
+	
+</div>
+
+
+
+
+			
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+			<script>hljs.initHighlightingOnLoad();</script>
+			
+
+			
+		</div>
+	</body>
+</html>
