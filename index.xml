@@ -67,7 +67,7 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 
 &lt;p&gt;Use &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;Docker Compose&lt;/a&gt; to run multiple containers together.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. Is &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
 </description>
     </item>
     
@@ -77,12 +77,13 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/gdb/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Do not handle signals:
-&lt;code&gt;
-handle SIGPIPE nostop noprint pass
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;p&gt;The &lt;a href=&#34;https://www.gnu.org/software/gdb/&#34;&gt;GNU Debugger&lt;/a&gt;, usually called just GDB and named gdb as an executable file,
+is the standard debugger for the GNU operating system.&lt;/p&gt;
+
+&lt;p&gt;To not let GDB handle signals:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gdb&amp;gt; handle SIGPIPE nostop noprint pass
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -92,10 +93,13 @@ handle SIGPIPE nostop noprint pass
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/git/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Fixup and squash: &lt;a href=&#34;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&#34;&gt;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Git commands: &lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34;&gt;http://orga.cat/posts/most-useful-git-commands&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://git-scm.com&#34;&gt;Git&lt;/a&gt; (/ɡɪt/) is a version control system that is used for software development
+and other version control tasks. As a distributed revision control system it
+is aimed at speed, data integrity, and support for distributed, non-linear workflows.&lt;/p&gt;
+
+&lt;p&gt;To fixup and squash commits in a branch read &lt;a href=&#34;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&#34;&gt;this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A list of useful Git commands can be found &lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -149,9 +153,10 @@ making the integration of data in certain types of applications easier and faste
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/python/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Style guide: &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;https://www.python.org/dev/peps/pep-0008/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; is a programming language that lets you work quickly
+and integrate systems more effectively.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8&lt;/a&gt; style guide for writing Python.&lt;/p&gt;
 </description>
     </item>
     

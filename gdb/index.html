@@ -25,12 +25,13 @@
 						
 	<h1>GDB</h1>
 	
-	<ul>
-<li>Do not handle signals:
-<code>
-handle SIGPIPE nostop noprint pass
-</code></li>
-</ul>
+	<p>The <a href="https://www.gnu.org/software/gdb/">GNU Debugger</a>, usually called just GDB and named gdb as an executable file,
+is the standard debugger for the GNU operating system.</p>
+
+<p>To not let GDB handle signals:</p>
+
+<pre><code>gdb&gt; handle SIGPIPE nostop noprint pass
+</code></pre>
 
 
 
@@ -43,7 +44,7 @@ handle SIGPIPE nostop noprint pass
 	<div class="sphinxsidebarwrapper">
 		<p class="logo">
 			<a href="https://joostmeijles.github.io/doc/">
-				<img class="logo" src="https://joostmeijles.github.io/doc/favicon.ico" alt="Logo"/>
+				<img class="logo" src="https://robohash.org/GDB" alt="Logo"/>
 				<h1 class="logo logo-name"></h1>
 			</a>
 		</p>
