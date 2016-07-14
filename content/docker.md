@@ -34,4 +34,4 @@ A large sheet with common Docker commands can be found [here](https://github.com
 
 Use [Docker Compose](http://docs.docker.com/compose/) to run multiple containers together.
 
-[Docker Kitematic](https://kitematic.com): a GUI for Docker containers. [Linux support](https://github.com/kitematic/kitematic/issues/49) still pending? 
+[Docker Kitematic](https://kitematic.com): a GUI for Docker containers. Is [Linux support](https://github.com/kitematic/kitematic/issues/49) still pending? 

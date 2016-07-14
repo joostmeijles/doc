@@ -2,5 +2,7 @@
 title: Python
 menu: main
 ---
+[Python](https://www.python.org) is a programming language that lets you work quickly
+and integrate systems more effectively.
 
-- Style guide: https://www.python.org/dev/peps/pep-0008/
+The [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide for writing Python.
