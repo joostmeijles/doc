@@ -68,6 +68,8 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 &lt;p&gt;Use &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;Docker Compose&lt;/a&gt; to run multiple containers together.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. Is &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://netshare.containx.io/&#34;&gt;Netshare&lt;/a&gt; a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.&lt;/p&gt;
 </description>
     </item>
     
