@@ -157,6 +157,8 @@ making the integration of data in certain types of applications easier and faste
 and integrate systems more effectively.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8&lt;/a&gt; style guide for writing Python.&lt;/p&gt;
+
+&lt;p&gt;The difference between &lt;strong&gt;str&lt;/strong&gt; and &lt;strong&gt;repr&lt;/strong&gt; &lt;a href=&#34;http://brennerm.github.io/posts/python-str-vs-repr.html&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
