@@ -102,6 +102,16 @@ is aimed at speed, data integrity, and support for distributed, non-linear workf
 &lt;p&gt;To fixup and squash commits in a branch read &lt;a href=&#34;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&#34;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;A list of useful Git commands can be found &lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To list remote sites:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To set remote url for a site, e.g. for switching from using HTTPS to SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote set-url origin git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
