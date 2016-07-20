@@ -53,6 +53,16 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 <pre><code>$ docker ps -a
 </code></pre>
 
+<p>To stop all running containers:</p>
+
+<pre><code>$ docker ps -q | xargs docker stop
+</code></pre>
+
+<p>To clean up all containers and images:</p>
+
+<pre><code>$ docker ps -q -a | xargs docker rm -v &amp;&amp; docker images -q | xargs docker rmi -f
+</code></pre>
+
 <p>A large sheet with common Docker commands can be found <a href="https://github.com/wsargent/docker-cheat-sheet">here</a>.</p>
 
 <p>Use <a href="http://docs.docker.com/compose/">Docker Compose</a> to run multiple containers together.</p>
