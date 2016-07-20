@@ -30,6 +30,16 @@ To list all running and stopped containers:
 $ docker ps -a
 ```
 
+To stop all running containers:
+```
+$ docker ps -q | xargs docker stop
+```
+
+To clean up all containers and images:
+```
+$ docker ps -q -a | xargs docker rm -v && docker images -q | xargs docker rmi -f
+```
+
 A large sheet with common Docker commands can be found [here](https://github.com/wsargent/docker-cheat-sheet).
 
 Use [Docker Compose](http://docs.docker.com/compose/) to run multiple containers together.
