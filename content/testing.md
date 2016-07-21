@@ -3,11 +3,6 @@ title: Testing
 menu: main
 ---
 
-- Run regression test:
-```
-./start_regression -bundle dev_telematics -ref dev_telematics_20150529 -test dev_telematics_latest` Run regression test locally
-```
-- SFM definition of done: http://dokuwiki.mapscape.nl/doku.php?id=dev:sfm_telematics_dod
 - HTML response codes: http://httpstatus.es/
 - Redirect to stdout and terminate after 1 second after connection is idle:
 ```
