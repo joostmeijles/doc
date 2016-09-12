@@ -3,12 +3,12 @@ title: Sqlite
 menu: main
 ---
 
-[SQLite|https://www.sqlite.org] is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. 
+[SQLite|https://www.sqlite.org] is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.
 
 To show table schema:
 ```
-sqlite> .schema dh_metadata
+sqlite> .schema table
 ```
 
 To exit SQLite console:
