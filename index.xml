@@ -63,11 +63,23 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 &lt;pre&gt;&lt;code&gt;$ docker ps -a
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;To stop all running containers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps -q | xargs docker stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To clean up all containers and images:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ docker ps -q -a | xargs docker rm -v &amp;amp;&amp;amp; docker images -q | xargs docker rmi -f
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;A large sheet with common Docker commands can be found &lt;a href=&#34;https://github.com/wsargent/docker-cheat-sheet&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Use &lt;a href=&#34;http://docs.docker.com/compose/&#34;&gt;Docker Compose&lt;/a&gt; to run multiple containers together.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. Is &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://netshare.containx.io/&#34;&gt;Netshare&lt;/a&gt; a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.&lt;/p&gt;
 </description>
     </item>
     
@@ -100,6 +112,16 @@ is aimed at speed, data integrity, and support for distributed, non-linear workf
 &lt;p&gt;To fixup and squash commits in a branch read &lt;a href=&#34;http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html&#34;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;A list of useful Git commands can be found &lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To list remote sites:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To set remote url for a site, e.g. for switching from using HTTPS to SSH:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote set-url origin git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -157,6 +179,8 @@ making the integration of data in certain types of applications easier and faste
 and integrate systems more effectively.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8&lt;/a&gt; style guide for writing Python.&lt;/p&gt;
+
+&lt;p&gt;The difference between &lt;strong&gt;str&lt;/strong&gt; and &lt;strong&gt;repr&lt;/strong&gt; &lt;a href=&#34;http://brennerm.github.io/posts/python-str-vs-repr.html&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -187,38 +211,33 @@ data passed between the web server and browsers remain private and integral.&lt;
     </item>
     
     <item>
-      <title>Spatialite</title>
-      <link>https://joostmeijles.github.io/doc/spatialite/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/spatialite/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/dh_clean&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/spatial_clean&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/data/id/release/DHive/Toolkit_latest/x86_64_Ubuntu_12.04/bin/CreateSpatialIndex&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Sqlite</title>
       <link>https://joostmeijles.github.io/doc/sqlite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/sqlite/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sq3dh&lt;/code&gt; SqLite console&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sqlgui&lt;/code&gt; SpatiaLite gui&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;select * from dh_metadata LIMIT 2;&lt;/code&gt; Show DHive Metadata&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.schema dh_metadata&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;update dh_metadata set MetaValue = 2.264 where MetaTag = &#39;DH_VERSION&#39;;&lt;/code&gt; Set DHive version&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.exit&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;select * from dh_mde where EnumGroup = &amp;quot;VIMP&amp;quot;;&lt;/code&gt; Select enums from VIMP (Vehicles impacted group), see DHive_Model/h_dh.h&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.header on&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;attach &amp;quot;./deu_msp_vw_its_ts_20150218.dh.sq3&amp;quot; as ref;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;select * from sfm_speedlimit_matches sign, dh_sms sms, dh_ssa ssa where sign.sms_id=sms.id and sms.id=ssa.smsid and ssa.attributename=201 and ssa.attributevalue=209;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;select SMSId  from ref.dh_ssa where AttributeName = 201 AND AttributeValue = 209;&lt;/code&gt; Select SMS ids for attribute H_DH_SSA_NAME_SIGN_CONSTRAINT with value H_DH_SSA_VALUE_SIGN_CONSTRAINT_WHEN_WET&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;p&gt;[SQLite|&lt;a href=&#34;https://www.sqlite.org&#34;&gt;https://www.sqlite.org&lt;/a&gt;] is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.&lt;/p&gt;
+
+&lt;p&gt;To show table schema:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .schema table
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To exit SQLite console:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To switch table headers on:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .header on
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To attach another database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; attach &amp;quot;&amp;lt;database&amp;gt;.sq3&amp;quot; as ref;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -229,11 +248,6 @@ data passed between the web server and browsers remain private and integral.&lt;
       
       <guid>https://joostmeijles.github.io/doc/testing/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;Run regression test:
-&lt;code&gt;
-./start_regression -bundle dev_telematics -ref dev_telematics_20150529 -test dev_telematics_latest` Run regression test locally
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;SFM definition of done: &lt;a href=&#34;http://dokuwiki.mapscape.nl/doku.php?id=dev:sfm_telematics_dod&#34;&gt;http://dokuwiki.mapscape.nl/doku.php?id=dev:sfm_telematics_dod&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;HTML response codes: &lt;a href=&#34;http://httpstatus.es/&#34;&gt;http://httpstatus.es/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Redirect to stdout and terminate after 1 second after connection is idle:
 &lt;code&gt;
@@ -270,14 +284,6 @@ sudo adduser $USER wireshark
       
       <guid>https://joostmeijles.github.io/doc/tools/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;List projects:
-&lt;code&gt;
-cmsutil list
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Generate Eclipse xml includes:
-&lt;code&gt;
-/data/users/public/reinco.hof/cms2ecl distr
-&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Set Java VM memory:
 &lt;code&gt;
 /etc/eclipse.ini
@@ -294,13 +300,6 @@ mv2 [-r latest]
 &lt;code&gt;
 ~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
 &lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Regression test results:
-&lt;code&gt;
-/data/users/attreg/regconv/dev_telematics
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/data/id/release/&lt;/code&gt; Releases; .convert script will search here for matching bundle/product&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;export CVTOOL_DEBUG_COMMAND=&amp;quot;valgrind --leak-check=full --show-reachable=yes --track-origins=yes {EXE} {ARGS} 2&amp;gt; {EXE}.valgrind&lt;/code&gt; Wrap command around every program started by Dakota (CV) tool (David Ingamells)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;export CVTOOL_DEBUG_PROCESSES=&amp;quot;SFMBuildTraces&amp;quot;&lt;/code&gt; Specify which process to debug, needs to be set in combination with Dakota Debug wrapper command&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ssh win7vm06&lt;/code&gt; Build on Windows&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ssh msbld614&lt;/code&gt; Build on Ubuntu 14.04&lt;/li&gt;
 &lt;li&gt;To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
@@ -311,10 +310,6 @@ Next set a breakpoint at the start of the program (such that the so gets loaded)
 &lt;li&gt;GDB sometimes hangs upon start, to reset GDB: &lt;code&gt;rm -Rf ~/.ddd&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Set breakpoint at catch in GDB: &lt;code&gt;catch catch&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;rsync -ave ssh from-machine:/dir/ /to/dir/&lt;/li&gt;
-&lt;li&gt;Determine changes between releases:
-&lt;code&gt;
-/data/id/release/VVVTools/TestTools_latest/x86_64_Ubuntu_14.04/MapTestRegressionTest/scripts/gettaskchanges.sh NDS/nds_toolkit_20160326 NDS/nds_toolkit_20160329 --browser
-&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

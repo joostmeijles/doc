@@ -25,19 +25,28 @@
 						
 	<h1>Sqlite</h1>
 	
-	<ul>
-<li><code>sq3dh</code> SqLite console</li>
-<li><code>sqlgui</code> SpatiaLite gui</li>
-<li><code>select * from dh_metadata LIMIT 2;</code> Show DHive Metadata</li>
-<li><code>.schema dh_metadata</code></li>
-<li><code>update dh_metadata set MetaValue = 2.264 where MetaTag = 'DH_VERSION';</code> Set DHive version</li>
-<li><code>.exit</code></li>
-<li><code>select * from dh_mde where EnumGroup = &quot;VIMP&quot;;</code> Select enums from VIMP (Vehicles impacted group), see DHive_Model/h_dh.h</li>
-<li><code>.header on</code></li>
-<li><code>attach &quot;./deu_msp_vw_its_ts_20150218.dh.sq3&quot; as ref;</code></li>
-<li><code>select * from sfm_speedlimit_matches sign, dh_sms sms, dh_ssa ssa where sign.sms_id=sms.id and sms.id=ssa.smsid and ssa.attributename=201 and ssa.attributevalue=209;</code></li>
-<li><code>select SMSId  from ref.dh_ssa where AttributeName = 201 AND AttributeValue = 209;</code> Select SMS ids for attribute H_DH_SSA_NAME_SIGN_CONSTRAINT with value H_DH_SSA_VALUE_SIGN_CONSTRAINT_WHEN_WET</li>
-</ul>
+	<p>[SQLite|<a href="https://www.sqlite.org">https://www.sqlite.org</a>] is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.</p>
+
+<p>To show table schema:</p>
+
+<pre><code>sqlite&gt; .schema table
+</code></pre>
+
+<p>To exit SQLite console:</p>
+
+<pre><code>sqlite&gt; .exit
+</code></pre>
+
+<p>To switch table headers on:</p>
+
+<pre><code>sqlite&gt; .header on
+</code></pre>
+
+<p>To attach another database:</p>
+
+<pre><code>sqlite&gt; attach &quot;&lt;database&gt;.sq3&quot; as ref;
+</code></pre>
 
 
 
@@ -91,10 +100,6 @@
 	
 	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/ssl/">SSL</a>
-	</li>
-	
-	<li class="toctree-l1">
-		<a class="reference internal" href="/doc/spatialite/">Spatialite</a>
 	</li>
 	
 	<li class="toctree-l1">
