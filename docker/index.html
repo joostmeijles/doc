@@ -29,7 +29,7 @@
 
 <p>To let Docker use another path for the images and containers:</p>
 
-<pre><code>$ vim /etc/default/docker 
+<pre><code>$ vim /etc/default/docker
 vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 </code></pre>
 
@@ -70,6 +70,11 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 <p><a href="https://kitematic.com">Docker Kitematic</a>: a GUI for Docker containers. Is <a href="https://github.com/kitematic/kitematic/issues/49">Linux support</a> still pending?</p>
 
 <p><a href="http://netshare.containx.io/">Netshare</a> a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.</p>
+
+<p>Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|<a href="https://github.com/spotify/docker-gc">https://github.com/spotify/docker-gc</a>].</p>
+
+<pre><code>$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
+</code></pre>
 
 
 
@@ -127,6 +132,10 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 	
 	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/synology/">Synology</a>
 	</li>
 	
 	<li class="toctree-l1">

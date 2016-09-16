@@ -7,7 +7,7 @@
 	
 	<meta name="generator" content="Hugo 0.16" />
 	
-	<title>Tools &mdash; My documentation page</title>
+	<title>Synology &mdash; My documentation page</title>
 	
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
@@ -23,36 +23,45 @@
 				<div class="bodywrapper">
 					<div class="body" role="main">
 						
-	<h1>Tools</h1>
+	<h1>Synology</h1>
 	
-	<ul>
-<li>Set Java VM memory:
-<code>
-/etc/eclipse.ini
-</code></li>
-<li>Check mounts:
-<code>
-df -h
-</code></li>
-<li>Mapview:
-<code>
-mv2 [-r latest]
-</code></li>
-<li>Regression tests:
-<code>
-~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
-</code></li>
-<li><code>ssh win7vm06</code> Build on Windows</li>
-<li><code>ssh msbld614</code> Build on Ubuntu 14.04</li>
-<li>To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
-<code>gdb&gt; set environment LD_PRELOAD &lt;librarytodebug.so&gt;</code>
-<code>gdb&gt; set environment LD_LIBRARY_PATH &lt;library path&gt;</code>
-<code>gdb&gt; dir &lt;source directory&gt;</code> This seems to be optional
-Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the so.</li>
-<li>GDB sometimes hangs upon start, to reset GDB: <code>rm -Rf ~/.ddd</code></li>
-<li>Set breakpoint at catch in GDB: <code>catch catch</code></li>
-<li>rsync -ave ssh from-machine:/dir/ /to/dir/</li>
-</ul>
+	<p>Asterisk is no longer supported on DSM 6. It can however be installed using <a href="https://github.com/Optware/Optware-ng">Optware</a>.</p>
+
+<p>To maintain Asterisk while upgrading from DSM 5 to DSM 6:</p>
+
+<ol>
+<li><p>Add the following community package: <a href="https://www.cphub.net">https://www.cphub.net</a></p></li>
+
+<li><p>Go to the Package Manager and install Easy Bootstrap Installer: this will install optware on your Synology.</p></li>
+
+<li><p>Backup the Asterisk configuration using the backup GUI, or at least copy sip.conf, extensions.conf, and user.conf</p></li>
+
+<li><p>Uninstall Asterisk from the DSM 5</p></li>
+
+<li><p>After all updates are done, you should be able to use ipkg from the command line. Use SSH to login, from your admin account, to your Synology.</p></li>
+
+<li><p>Install Asterisk 13 and GUI:</p>
+
+<pre><code>$ sudo ipkg install asterisk13 asterisk-gui
+</code></pre></li>
+
+<li><p>Test if your Asterisk installation runs:</p>
+
+<pre><code>$ sudo asterisk -vvv
+</code></pre></li>
+
+<li><p>Copy the backup files (not all are compatible) sip.conf, extensions.conf, and user.conf to /opt/etc/asterisk.</p></li>
+
+<li><p>Enable the web GUI by editing manager.conf and http.conf, see <a href="http://doc.astlinux.org/userdoc:tt_asterisk-gui">here</a>.</p></li>
+
+<li><p>To automatically run Asterisk upon start add an Upstart script to e.g. /etc/init/asterisk.conf:</p></li>
+</ol>
+
+<pre><code>start on runlevel [2345]
+stop on runlevel [06]
+
+exec /opt/sbin/asterisk
+</code></pre>
 
 
 
@@ -65,7 +74,7 @@ Next set a breakpoint at the start of the program (such that the so gets loaded)
 	<div class="sphinxsidebarwrapper">
 		<p class="logo">
 			<a href="https://joostmeijles.github.io/doc/">
-				<img class="logo" src="https://robohash.org/Tools" alt="Logo"/>
+				<img class="logo" src="https://robohash.org/Synology" alt="Logo"/>
 				<h1 class="logo logo-name"></h1>
 			</a>
 		</p>

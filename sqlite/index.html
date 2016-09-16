@@ -25,13 +25,28 @@
 						
 	<h1>Sqlite</h1>
 	
-	<ul>
-<li><code>sqlgui</code> SpatiaLite gui</li>
-<li><code>.schema &lt;table&gt;</code></li>
-<li><code>.exit</code></li>
-<li><code>.header on</code></li>
-<li><code>attach &quot;&lt;db&gt;.sq3&quot; as ref;</code></li>
-</ul>
+	<p><a href="https://www.sqlite.org">SQLite</a> is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.</p>
+
+<p>To show table schema:</p>
+
+<pre><code>sqlite&gt; .schema table
+</code></pre>
+
+<p>To exit SQLite console:</p>
+
+<pre><code>sqlite&gt; .exit
+</code></pre>
+
+<p>To switch table headers on:</p>
+
+<pre><code>sqlite&gt; .header on
+</code></pre>
+
+<p>To attach another database:</p>
+
+<pre><code>sqlite&gt; attach &quot;&lt;database&gt;.sq3&quot; as ref;
+</code></pre>
 
 
 
@@ -89,6 +104,10 @@
 	
 	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/synology/">Synology</a>
 	</li>
 	
 	<li class="toctree-l1">
