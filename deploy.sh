@@ -217,4 +217,6 @@ sanitize() {
 	"$@" 2> >(filter 1>&2) | filter
 }
 
+hugo -d dist
+
 [[ $1 = --source-only ]] || main "$@"
