@@ -216,74 +216,13 @@ data passed between the web server and browsers remain private and integral.&lt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/sqlite/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.sqlite.org&#34;&gt;SQLite&lt;/a&gt; is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
-SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain.&lt;/p&gt;
-
-&lt;p&gt;To show table schema:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .schema table
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To exit SQLite console:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To switch table headers on:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .header on
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To attach another database:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; attach &amp;quot;&amp;lt;database&amp;gt;.sq3&amp;quot; as ref;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Synology</title>
-      <link>https://joostmeijles.github.io/doc/synology/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/synology/</guid>
-      <description>&lt;p&gt;Asterisk is no longer supported on DSM 6. It can however be installed using &lt;a href=&#34;https://github.com/Optware/Optware-ng&#34;&gt;Optware&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To maintain Asterisk while upgrading from DSM 5 to DSM 6:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Add the following community package: &lt;a href=&#34;https://www.cphub.net&#34;&gt;https://www.cphub.net&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Go to the Package Manager and install Easy Bootstrap Installer: this will install optware on your Synology.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Backup the Asterisk configuration using the backup GUI, or at least copy sip.conf, extensions.conf, and user.conf&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Uninstall Asterisk from the DSM 5&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;After all updates are done, you should be able to use ipkg from the command line. Use SSH to login, from your admin account, to your Synology.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Install Asterisk 13 and GUI:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo ipkg install asterisk13 asterisk-gui
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Test if your Asterisk installation runs:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo asterisk -vvv
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Copy the backup files (not all are compatible) sip.conf, extensions.conf, and user.conf to /opt/etc/asterisk.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Enable the web GUI by editing manager.conf and http.conf, see &lt;a href=&#34;http://doc.astlinux.org/userdoc:tt_asterisk-gui&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;To automatically run Asterisk upon start add an Upstart script to e.g. /etc/init/asterisk.conf:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;start on runlevel [2345]
-stop on runlevel [06]
-
-exec /opt/sbin/asterisk
-&lt;/code&gt;&lt;/pre&gt;
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sqlgui&lt;/code&gt; SpatiaLite gui&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.schema &amp;lt;table&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.exit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.header on&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;attach &amp;quot;&amp;lt;db&amp;gt;.sq3&amp;quot; as ref;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
