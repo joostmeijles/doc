@@ -14,3 +14,5 @@ Start program with GDB attached:
 ```
 $ gdb -ex=r --args <program>
 ```
+
+A cheat sheet with GDB commands can be found [here](https://people.eecs.berkeley.edu/~mavam/teaching/cs161-sp11/gdb-refcard.pdf).
