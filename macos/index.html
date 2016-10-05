@@ -7,7 +7,7 @@
 	
 	<meta name="generator" content="Hugo 0.16" />
 	
-	<title>404 Page not found &mdash; My documentation page</title>
+	<title>MacOS &mdash; My documentation page</title>
 	
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
@@ -23,9 +23,21 @@
 				<div class="bodywrapper">
 					<div class="body" role="main">
 						
-	<h1>Page not found</h1>
+	<h1>MacOS</h1>
+	
+	<p>To automatically mount network folders in MacOS:
+- Create a file containing the mount points, e.g. /etc/auto_nas:</p>
 
-	I'm sorry, but the requested page wasn’t found on the server.
+<pre><code>network-address -fstype=afp afp://user:password@address/directory
+</code></pre>
+
+<ul>
+<li>Use the newly created file in /etc/auto_master:
+<code>
+/nas			auto_nas	-nosuid
+</code></li>
+</ul>
+
 
 
 						
@@ -37,7 +49,7 @@
 	<div class="sphinxsidebarwrapper">
 		<p class="logo">
 			<a href="https://joostmeijles.github.io/doc/">
-				<img class="logo" src="https://robohash.org/404%20Page%20not%20found" alt="Logo"/>
+				<img class="logo" src="https://robohash.org/MacOS" alt="Logo"/>
 				<h1 class="logo logo-name"></h1>
 			</a>
 		</p>
