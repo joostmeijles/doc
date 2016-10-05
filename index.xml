@@ -444,6 +444,10 @@ gconftool --set --type=string /apps/gnome-terminal/profiles/Default/encoding en_
 
 &lt;p&gt;Linux select vs. poll vs. epoll: &lt;a href=&#34;http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/&#34;&gt;http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/&lt;/a&gt;
 POLLOUT explained: &lt;a href=&#34;http://stackoverflow.com/questions/12170037/when-to-use-pollout&#34;&gt;http://stackoverflow.com/questions/12170037/when-to-use-pollout&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.loic-yvonnet.com/articles/category/cpp/&#34;&gt;C++&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;14&lt;/sub&gt; multi-theading explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
