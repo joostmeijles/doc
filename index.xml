@@ -170,17 +170,15 @@ and useful commands that weren&amp;rsquo;t clear at first sight after reading th
       
       <guid>https://joostmeijles.github.io/doc/macos/</guid>
       <description>&lt;p&gt;To automatically mount network folders in MacOS:
-- Create a file containing the mount points, e.g. /etc/auto_nas:&lt;/p&gt;
+Create a file containing the mount points, e.g. /etc/auto_nas:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;network-address -fstype=afp afp://user:password@address/directory
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Use the newly created file in /etc/auto_master:
-&lt;code&gt;
-/nas			auto_nas	-nosuid
-&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Use the newly created file in /etc/auto_master:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/nas			auto_nas	-nosuid
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
