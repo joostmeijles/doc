@@ -26,17 +26,15 @@
 	<h1>MacOS</h1>
 	
 	<p>To automatically mount network folders in MacOS:
-1. Create a file containing the mount points, e.g. <em>/etc/auto_nas</em>:</p>
+Create a file containing the mount points, e.g. <em>/etc/auto_nas</em>:</p>
 
 <pre><code>network-address -fstype=afp afp://user:password@address/directory
 </code></pre>
 
-<ol>
-<li>Use the newly created file in <em>/etc/auto_master</em>:
-<code>
-/nas			auto_nas	-nosuid
-</code></li>
-</ol>
+<p>Use the newly created file in <em>/etc/auto_master</em>:</p>
+
+<pre><code>/nas			auto_nas	-nosuid
+</code></pre>
 
 
 
