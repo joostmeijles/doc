@@ -16,12 +16,6 @@ df -h
 ```
 mv2 [-r latest]
 ```
-- Regression tests:
-```
-~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
-```
-- `ssh win7vm06` Build on Windows
-- `ssh msbld614` Build on Ubuntu 14.04
 - To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
     `gdb> set environment LD_PRELOAD <librarytodebug.so>`
     `gdb> set environment LD_LIBRARY_PATH <library path>`
