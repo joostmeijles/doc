@@ -374,12 +374,6 @@ df -h
 &lt;code&gt;
 mv2 [-r latest]
 &lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Regression tests:
-&lt;code&gt;
-~/Projects/MPA_Regression/trunk/data/conversions/dev_telematics/
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh win7vm06&lt;/code&gt; Build on Windows&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh msbld614&lt;/code&gt; Build on Ubuntu 14.04&lt;/li&gt;
 &lt;li&gt;To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
 &lt;code&gt;gdb&amp;gt; set environment LD_PRELOAD &amp;lt;librarytodebug.so&amp;gt;&lt;/code&gt;
 &lt;code&gt;gdb&amp;gt; set environment LD_LIBRARY_PATH &amp;lt;library path&amp;gt;&lt;/code&gt;
