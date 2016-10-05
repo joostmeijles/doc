@@ -66,3 +66,5 @@ CCache with Memcached: https://gist.github.com/itensionanders/2bd0056027f8308d4c
 
 Linux select vs. poll vs. epoll: http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/
 POLLOUT explained: http://stackoverflow.com/questions/12170037/when-to-use-pollout
+
+- [C++11/14 multi-theading explained](http://www.loic-yvonnet.com/articles/category/cpp/)
