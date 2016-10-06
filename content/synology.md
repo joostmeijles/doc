@@ -18,12 +18,12 @@ To maintain Asterisk while upgrading from DSM 5 to DSM 6:
 5. After all updates are done, you should be able to use ipkg from the command line. Use SSH to login, from your admin account, to your Synology.
 
 6. Install Asterisk 13 and GUI:
-```
+```bash
 $ sudo ipkg install asterisk13 asterisk-gui
 ```
 
 7. Test if your Asterisk installation runs:
-```
+```bash
 $ sudo asterisk -vvv
 ```
 
@@ -33,7 +33,7 @@ $ sudo asterisk -vvv
 
 10. To automatically run Asterisk upon start add an Upstart script to e.g. /etc/init/asterisk.conf:
 
-```
+```bash
 start on runlevel [2345]
 stop on runlevel [06]
 

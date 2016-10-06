@@ -5,38 +5,38 @@ menu: main
 [Docker](http://www.docker.com) is the world’s leading software containerization platform.
 
 To let Docker use another path for the images and containers:
-```
+```bash
 $ vim /etc/default/docker
 vim> DOCKER_OPTS="-g /volumes3/docker"
 ```
 
 To interactively run a custom program, e.g. /bin/bash, in a running container:
-```
+```bash
 $ docker exec -ti <container> /bin/bash
 ```
 
 To obtain the host name and port number of a container:
-```
+```bash
 $ docker inspect --format='{{(index (index .NetworkSettings.Ports "80/tcp") 0).HostPort}}' <container>
 ```
 
 To link containers together:
-```
+```bash
 $ docker run --name <container> --link <container>:<image> -P -d <image>
 ```
 
 To list all running and stopped containers:
-```
+```bash
 $ docker ps -a
 ```
 
 To stop all running containers:
-```
+```bash
 $ docker ps -q | xargs docker stop
 ```
 
 To clean up all containers and images:
-```
+```bash
 $ docker ps -q -a | xargs docker rm -v && docker images -q | xargs docker rmi -f
 ```
 
@@ -49,6 +49,6 @@ Use [Docker Compose](http://docs.docker.com/compose/) to run multiple containers
 [Netshare](http://netshare.containx.io/) a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.
 
 Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|https://github.com/spotify/docker-gc].
-```
+```bash
 $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
 ```
