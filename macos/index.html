@@ -29,12 +29,12 @@
 
 <p>Create a file containing the mount points, e.g. <em>/etc/auto_nas</em>:</p>
 
-<pre><code>network-address -fstype=afp afp://user:password@address/directory
+<pre><code class="language-bash">network-address -fstype=afp afp://user:password@address/directory
 </code></pre>
 
 <p>Use the newly created file in <em>/etc/auto_master</em>:</p>
 
-<pre><code>/nas			auto_nas	-nosuid
+<pre><code class="language-bash">/nas			auto_nas	-nosuid
 </code></pre>
 
 

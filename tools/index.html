@@ -26,26 +26,15 @@
 	<h1>Tools</h1>
 	
 	<ul>
-<li>Set Java VM memory:
-<code>
-/etc/eclipse.ini
-</code></li>
-<li>Check mounts:
-<code>
-df -h
-</code></li>
-<li>Mapview:
-<code>
-mv2 [-r latest]
-</code></li>
-<li>To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
-<code>gdb&gt; set environment LD_PRELOAD &lt;librarytodebug.so&gt;</code>
-<code>gdb&gt; set environment LD_LIBRARY_PATH &lt;library path&gt;</code>
-<code>gdb&gt; dir &lt;source directory&gt;</code> This seems to be optional
-Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the so.</li>
-<li>GDB sometimes hangs upon start, to reset GDB: <code>rm -Rf ~/.ddd</code></li>
-<li>Set breakpoint at catch in GDB: <code>catch catch</code></li>
-<li>rsync -ave ssh from-machine:/dir/ /to/dir/</li>
+<li><p>Check mounts:</p>
+
+<pre><code class="language-bash">$ df -h
+</code></pre></li>
+
+<li><p>Remote copy files using rsync</p>
+
+<pre><code class="language-bash">$ rsync -ave ssh from-machine:/from/dir/ /to/dir/
+</code></pre></li>
 </ul>
 
 

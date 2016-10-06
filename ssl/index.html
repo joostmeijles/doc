@@ -31,12 +31,12 @@ data passed between the web server and browsers remain private and integral.</p>
 
 <p>To create a SSL bundle (each certificate indicates its own dependent certificate):</p>
 
-<pre><code>$ cat server.crt intermediate.crt root.crt &gt; ssl-bundle.crt
+<pre><code class="language-bash">$ cat server.crt intermediate.crt root.crt &gt; ssl-bundle.crt
 </code></pre>
 
 <p>To verify a SSL certificate setup (note that openssl requires to have the root certificate locally, otherwise you get error 19 (self signed &hellip;)):</p>
 
-<pre><code>$ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-R1.crt
+<pre><code class="language-bash">$ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-R1.crt
 </code></pre>
 
 <p>How to debug certificates can be read <a href="http://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/">here</a>.</p>

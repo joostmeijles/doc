@@ -19,12 +19,12 @@ Debian package management is for example used for &lt;a href=&#34;http://www.ubu
 
 &lt;p&gt;To show package contents:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ dpkg -c &amp;lt;package&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dpkg -c &amp;lt;package&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To show package meta info:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ dpkg-deb -I &amp;lt;package&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dpkg-deb -I &amp;lt;package&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -39,38 +39,38 @@ Debian package management is for example used for &lt;a href=&#34;http://www.ubu
 
 &lt;p&gt;To let Docker use another path for the images and containers:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ vim /etc/default/docker
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ vim /etc/default/docker
 vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To interactively run a custom program, e.g. /bin/bash, in a running container:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker exec -ti &amp;lt;container&amp;gt; /bin/bash
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker exec -ti &amp;lt;container&amp;gt; /bin/bash
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To obtain the host name and port number of a container:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker inspect --format=&#39;{{(index (index .NetworkSettings.Ports &amp;quot;80/tcp&amp;quot;) 0).HostPort}}&#39; &amp;lt;container&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker inspect --format=&#39;{{(index (index .NetworkSettings.Ports &amp;quot;80/tcp&amp;quot;) 0).HostPort}}&#39; &amp;lt;container&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To link containers together:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker run --name &amp;lt;container&amp;gt; --link &amp;lt;container&amp;gt;:&amp;lt;image&amp;gt; -P -d &amp;lt;image&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker run --name &amp;lt;container&amp;gt; --link &amp;lt;container&amp;gt;:&amp;lt;image&amp;gt; -P -d &amp;lt;image&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To list all running and stopped containers:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker ps -a
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker ps -a
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To stop all running containers:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker ps -q | xargs docker stop
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker ps -q | xargs docker stop
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To clean up all containers and images:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker ps -q -a | xargs docker rm -v &amp;amp;&amp;amp; docker images -q | xargs docker rmi -f
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker ps -q -a | xargs docker rm -v &amp;amp;&amp;amp; docker images -q | xargs docker rmi -f
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A large sheet with common Docker commands can be found &lt;a href=&#34;https://github.com/wsargent/docker-cheat-sheet&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -83,7 +83,7 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 
 &lt;p&gt;Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|&lt;a href=&#34;https://github.com/spotify/docker-gc&#34;&gt;https://github.com/spotify/docker-gc&lt;/a&gt;].&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -99,15 +99,34 @@ is the standard debugger for the GNU operating system.&lt;/p&gt;
 
 &lt;p&gt;To not let GDB handle signals:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gdb&amp;gt; handle SIGPIPE nostop noprint pass
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gdb&amp;gt; handle SIGPIPE nostop noprint pass
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Start program with GDB attached:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ gdb -ex=r --args &amp;lt;program&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ gdb -ex=r --args &amp;lt;program&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;A cheat sheet with GDB commands can be found &lt;a href=&#34;https://people.eecs.berkeley.edu/~mavam/teaching/cs161-sp11/gdb-refcard.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gdb&amp;gt; set environment LD_PRELOAD &amp;lt;librarytodebug.so&amp;gt;
+gdb&amp;gt; set environment LD_LIBRARY_PATH &amp;lt;library path&amp;gt;
+gdb&amp;gt; dir &amp;lt;source directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the shared object.&lt;/p&gt;
+
+&lt;p&gt;GDB sometimes hangs upon start, to reset GDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rm -Rf ~/.ddd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To set a breakpoint at catch in GDB:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gdb&amp;gt; catch catch
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -173,12 +192,12 @@ and useful commands that weren&amp;rsquo;t clear at first sight after reading th
 
 &lt;p&gt;Create a file containing the mount points, e.g. &lt;em&gt;/etc/auto_nas&lt;/em&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;network-address -fstype=afp afp://user:password@address/directory
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;network-address -fstype=afp afp://user:password@address/directory
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Use the newly created file in &lt;em&gt;/etc/auto_master&lt;/em&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/nas			auto_nas	-nosuid
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/nas			auto_nas	-nosuid
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -196,7 +215,7 @@ making the integration of data in certain types of applications easier and faste
 
 &lt;p&gt;To copy a database:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mongo&amp;gt; db.copyDatabase(&amp;quot;from-dbname&amp;quot;,&amp;quot;to-dbname&amp;quot;,&amp;quot;from.host.nl&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mongo&amp;gt; db.copyDatabase(&amp;quot;from-dbname&amp;quot;,&amp;quot;to-dbname&amp;quot;,&amp;quot;from.host.nl&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -228,12 +247,12 @@ data passed between the web server and browsers remain private and integral.&lt;
 
 &lt;p&gt;To create a SSL bundle (each certificate indicates its own dependent certificate):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cat server.crt intermediate.crt root.crt &amp;gt; ssl-bundle.crt
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cat server.crt intermediate.crt root.crt &amp;gt; ssl-bundle.crt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To verify a SSL certificate setup (note that openssl requires to have the root certificate locally, otherwise you get error 19 (self signed &amp;hellip;)):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-R1.crt
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-R1.crt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;How to debug certificates can be read &lt;a href=&#34;http://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -253,22 +272,22 @@ SQLite is the most widely deployed database engine in the world. The source code
 
 &lt;p&gt;To show table schema:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .schema table
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite&amp;gt; .schema table
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To exit SQLite console:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .exit
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite&amp;gt; .exit
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To switch table headers on:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; .header on
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite&amp;gt; .header on
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To attach another database:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sqlite&amp;gt; attach &amp;quot;&amp;lt;database&amp;gt;.sq3&amp;quot; as ref;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sqlite&amp;gt; attach &amp;quot;&amp;lt;database&amp;gt;.sq3&amp;quot; as ref;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -296,12 +315,12 @@ SQLite is the most widely deployed database engine in the world. The source code
 
 &lt;li&gt;&lt;p&gt;Install Asterisk 13 and GUI:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo ipkg install asterisk13 asterisk-gui
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo ipkg install asterisk13 asterisk-gui
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Test if your Asterisk installation runs:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo asterisk -vvv
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo asterisk -vvv
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Copy the backup files (not all are compatible) sip.conf, extensions.conf, and user.conf to /opt/etc/asterisk.&lt;/p&gt;&lt;/li&gt;
@@ -311,7 +330,7 @@ SQLite is the most widely deployed database engine in the world. The source code
 &lt;li&gt;&lt;p&gt;To automatically run Asterisk upon start add an Upstart script to e.g. /etc/init/asterisk.conf:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;pre&gt;&lt;code&gt;start on runlevel [2345]
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;start on runlevel [2345]
 stop on runlevel [06]
 
 exec /opt/sbin/asterisk
@@ -330,27 +349,27 @@ exec /opt/sbin/asterisk
 
 &lt;li&gt;&lt;p&gt;Redirect to stdout and terminate after 1 second after connection is idle:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo socat -T1 TCP4-LISTEN:8080,reuseaddr STDOUT
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo socat -T1 TCP4-LISTEN:8080,reuseaddr STDOUT
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Show local network traffic on port 8080:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo tcpflow -Ci lo port 8080
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo tcpflow -Ci lo port 8080
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Show local network traffic matching PUT:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo ngrep -d lo &#39;^PUT&#39;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo ngrep -d lo &#39;^PUT&#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;TCP dump:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo tcpdump -i lo &#39;port 80&#39; -w -
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo tcpdump -i lo &#39;port 80&#39; -w -
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Wireshark:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install wireshark
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install wireshark
 $ sudo dpkg-reconfigure wireshark-common
 $ sudo adduser $USER wireshark
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
@@ -369,26 +388,15 @@ $ sudo adduser $USER wireshark
       
       <guid>https://joostmeijles.github.io/doc/tools/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;Set Java VM memory:
-&lt;code&gt;
-/etc/eclipse.ini
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Check mounts:
-&lt;code&gt;
-df -h
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Mapview:
-&lt;code&gt;
-mv2 [-r latest]
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):
-&lt;code&gt;gdb&amp;gt; set environment LD_PRELOAD &amp;lt;librarytodebug.so&amp;gt;&lt;/code&gt;
-&lt;code&gt;gdb&amp;gt; set environment LD_LIBRARY_PATH &amp;lt;library path&amp;gt;&lt;/code&gt;
-&lt;code&gt;gdb&amp;gt; dir &amp;lt;source directory&amp;gt;&lt;/code&gt; This seems to be optional
-Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the so.&lt;/li&gt;
-&lt;li&gt;GDB sometimes hangs upon start, to reset GDB: &lt;code&gt;rm -Rf ~/.ddd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Set breakpoint at catch in GDB: &lt;code&gt;catch catch&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;rsync -ave ssh from-machine:/dir/ /to/dir/&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check mounts:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ df -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Remote copy files using rsync&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rsync -ave ssh from-machine:/from/dir/ /to/dir/
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

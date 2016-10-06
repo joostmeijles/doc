@@ -30,15 +30,34 @@ is the standard debugger for the GNU operating system.</p>
 
 <p>To not let GDB handle signals:</p>
 
-<pre><code>gdb&gt; handle SIGPIPE nostop noprint pass
+<pre><code class="language-bash">gdb&gt; handle SIGPIPE nostop noprint pass
 </code></pre>
 
 <p>Start program with GDB attached:</p>
 
-<pre><code>$ gdb -ex=r --args &lt;program&gt;
+<pre><code class="language-bash">$ gdb -ex=r --args &lt;program&gt;
 </code></pre>
 
 <p>A cheat sheet with GDB commands can be found <a href="https://people.eecs.berkeley.edu/~mavam/teaching/cs161-sp11/gdb-refcard.pdf">here</a>.</p>
+
+<p>To debug a dynamically loaded library with GDB (make sure that shared libraries contain debug symbols, this is e.g. not the case for MapAPI releases):</p>
+
+<pre><code class="language-bash">gdb&gt; set environment LD_PRELOAD &lt;librarytodebug.so&gt;
+gdb&gt; set environment LD_LIBRARY_PATH &lt;library path&gt;
+gdb&gt; dir &lt;source directory&gt;
+</code></pre>
+
+<p>Next set a breakpoint at the start of the program (such that the so gets loaded) and run GDB. At the breakpoint you should be able to load the source file from the shared object.</p>
+
+<p>GDB sometimes hangs upon start, to reset GDB:</p>
+
+<pre><code class="language-bash">$ rm -Rf ~/.ddd
+</code></pre>
+
+<p>To set a breakpoint at catch in GDB:</p>
+
+<pre><code class="language-bash">gdb&gt; catch catch
+</code></pre>
 
 
 

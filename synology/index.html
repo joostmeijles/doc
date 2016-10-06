@@ -42,12 +42,12 @@
 
 <li><p>Install Asterisk 13 and GUI:</p>
 
-<pre><code>$ sudo ipkg install asterisk13 asterisk-gui
+<pre><code class="language-bash">$ sudo ipkg install asterisk13 asterisk-gui
 </code></pre></li>
 
 <li><p>Test if your Asterisk installation runs:</p>
 
-<pre><code>$ sudo asterisk -vvv
+<pre><code class="language-bash">$ sudo asterisk -vvv
 </code></pre></li>
 
 <li><p>Copy the backup files (not all are compatible) sip.conf, extensions.conf, and user.conf to /opt/etc/asterisk.</p></li>
@@ -57,7 +57,7 @@
 <li><p>To automatically run Asterisk upon start add an Upstart script to e.g. /etc/init/asterisk.conf:</p></li>
 </ol>
 
-<pre><code>start on runlevel [2345]
+<pre><code class="language-bash">start on runlevel [2345]
 stop on runlevel [06]
 
 exec /opt/sbin/asterisk
