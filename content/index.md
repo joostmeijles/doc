@@ -5,12 +5,8 @@ weight: 0
 ---
 
 On this webpage I keep an overview of the software I use, interesting
-articles that I find on the Internet,
+articles I found,
 and useful commands that weren't clear at first sight after reading the documentation.
-
-{{< admonition title="Note" type="note" >}}
-I am just setting up this site and am in the process of transferring my current documentation to here.
-{{< /admonition >}}
 
 ## Articles
 - [Distributed Systems and Logs at LinkedIn](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
