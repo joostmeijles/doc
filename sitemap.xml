@@ -6,6 +6,10 @@
   </url>
   
   <url>
+    <loc>https://joostmeijles.github.io/doc/c&#43;&#43;/</loc>
+  </url>
+  
+  <url>
     <loc>https://joostmeijles.github.io/doc/debian/</loc>
   </url>
   
@@ -19,6 +23,10 @@
   
   <url>
     <loc>https://joostmeijles.github.io/doc/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joostmeijles.github.io/doc/http/</loc>
   </url>
   
   <url>
@@ -42,6 +50,10 @@
   </url>
   
   <url>
+    <loc>https://joostmeijles.github.io/doc/socket/</loc>
+  </url>
+  
+  <url>
     <loc>https://joostmeijles.github.io/doc/sqlite/</loc>
   </url>
   
@@ -55,10 +67,6 @@
   
   <url>
     <loc>https://joostmeijles.github.io/doc/tools/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joostmeijles.github.io/doc/various/</loc>
   </url>
   
   <url>

@@ -9,6 +9,26 @@
     <atom:link href="https://joostmeijles.github.io/doc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>C&#43;&#43;</title>
+      <link>https://joostmeijles.github.io/doc/c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/c&#43;&#43;/</guid>
+      <description>&lt;p&gt;C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.&lt;/p&gt;
+
+&lt;p&gt;C++&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;14&lt;/sub&gt; multi-theading is explained &lt;a href=&#34;http://www.loic-yvonnet.com/articles/category/cpp/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Overlapping static instances are explained &lt;a href=&#34;http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Controlling symbol visibility is explained &lt;a href=&#34;http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://www.akkadia.org/drepper/dsohowto.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Embedding text in an object file is described &lt;a href=&#34;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Compiling C++ code using &lt;a href=&#34;http://ccache.samba.org/&#34;&gt;CCache&lt;/a&gt; with &lt;a href=&#34;http://memcached.org/&#34;&gt;Memcached&lt;/a&gt; can be found &lt;a href=&#34;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Debian</title>
       <link>https://joostmeijles.github.io/doc/debian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -26,6 +46,49 @@ Debian package management is for example used for &lt;a href=&#34;http://www.ubu
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dpkg-deb -I &amp;lt;package&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To force install using apt-get:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get -o Dpkg::Options::=&amp;quot;--force-overwrite&amp;quot; install &amp;lt;package&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How to setup the micro firewall: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server&#34;&gt;ufw&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo ufw
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Show latest ran cron jobs:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo grep -i cron /var/log/syslog | tail -2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enabling core dumps &lt;a href=&#34;http://www.akadia.com/services/ora_enable_core.html&#34;&gt;explained here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To change SUDO behavior:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ visudo
+visudo&amp;gt; username ALL=(ALL) NOPASSWD:ALL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To list open file descriptors per pid:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ lsof -p &amp;lt;pid&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Number of open files on Linux: &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&#34;&gt;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To set ulimit system wide:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo vim /etc/security/limits.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An easy memory usage overview can be obtained using &lt;a href=&#34;https://github.com/crquan/coremem&#34;&gt;coremem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The difference between &lt;em&gt;ps&lt;/em&gt; vs &lt;em&gt;top&lt;/em&gt; cpu usage  &lt;a href=&#34;http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To trace function calls, &lt;a href=&#34;http://ndevilla.free.fr/etrace/&#34;&gt;etrace&lt;/a&gt; can be used.&lt;/p&gt;
+
+&lt;p&gt;Filesytem over SSH: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34;&gt;SSHFS&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -79,7 +142,7 @@ vim&amp;gt; DOCKER_OPTS=&amp;quot;-g /volumes3/docker&amp;quot;
 
 &lt;p&gt;&lt;a href=&#34;https://kitematic.com&#34;&gt;Docker Kitematic&lt;/a&gt;: a GUI for Docker containers. Is &lt;a href=&#34;https://github.com/kitematic/kitematic/issues/49&#34;&gt;Linux support&lt;/a&gt; still pending?&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://netshare.containx.io/&#34;&gt;Netshare&lt;/a&gt; a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://netshare.containx.io/&#34;&gt;Netshare&lt;/a&gt; is a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.&lt;/p&gt;
 
 &lt;p&gt;Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|&lt;a href=&#34;https://github.com/spotify/docker-gc&#34;&gt;https://github.com/spotify/docker-gc&lt;/a&gt;].&lt;/p&gt;
 
@@ -153,6 +216,20 @@ is aimed at speed, data integrity, and support for distributed, non-linear workf
 
 &lt;pre&gt;&lt;code&gt;$ git remote set-url origin git@github.com:&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;.git
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://joostmeijles.github.io/doc/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/http/</guid>
+      <description>&lt;p&gt;The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web.&lt;/p&gt;
+
+&lt;p&gt;The HTTP workgroup page: &lt;a href=&#34;http://httpwg.org/&#34;&gt;http://httpwg.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some HTTP benchmark rules to consider can be found &lt;a href=&#34;https://www.mnot.net/blog/2011/05/18/http_benchmark_rules&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -262,6 +339,37 @@ data passed between the web server and browsers remain private and integral.&lt;
     </item>
     
     <item>
+      <title>Sockets</title>
+      <link>https://joostmeijles.github.io/doc/socket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/socket/</guid>
+      <description>&lt;p&gt;To lookup open sockets:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ while [ 1 ]; do sudo lsof -p `pidof &amp;lt;proc name&amp;gt;` | grep ESTABLISHED | wc; sysctl fs.file-nr; sleep 1; done
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How the Linux TCP backlog works is explained &lt;a href=&#34;http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;TCP states:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html&#34;&gt;TCP TIME_WAIT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ibase.ru/devinfo/tcp_nodelay.txt&#34;&gt;TCP_NODELAY&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.kegel.com/c10k.html&#34;&gt;C10K problem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Linux select vs. poll vs. epoll
+&lt;a href=&#34;http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The POLLOUT event &lt;a href=&#34;http://stackoverflow.com/questions/12170037/when-to-use-pollout&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Socket reuse &lt;a href=&#34;http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Sqlite</title>
       <link>https://joostmeijles.github.io/doc/sqlite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -298,7 +406,7 @@ SQLite is the most widely deployed database engine in the world. The source code
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://joostmeijles.github.io/doc/synology/</guid>
-      <description>&lt;p&gt;Asterisk is no longer supported on DSM 6. It can however be installed using &lt;a href=&#34;https://github.com/Optware/Optware-ng&#34;&gt;Optware&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.asterisk.org&#34;&gt;Asterisk&lt;/a&gt; is no longer supported on DSM 6. It can however be installed using &lt;a href=&#34;https://github.com/Optware/Optware-ng&#34;&gt;Optware&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;To maintain Asterisk while upgrading from DSM 5 to DSM 6:&lt;/p&gt;
 
@@ -378,123 +486,6 @@ $ sudo adduser $USER wireshark
 
 &lt;li&gt;&lt;p&gt;Test C++ code using GMock: &lt;a href=&#34;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&#34;&gt;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://joostmeijles.github.io/doc/tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/tools/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Check mounts:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ df -h
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Remote copy files using rsync&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rsync -ave ssh from-machine:/from/dir/ /to/dir/
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Various</title>
-      <link>https://joostmeijles.github.io/doc/various/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/various/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;Embed text in object file: &lt;a href=&#34;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&#34;&gt;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;grep -A1 [text] [file]&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;du -hs * | sort -h&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overlapping static instances: &lt;a href=&#34;http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap&#34;&gt;http://stackoverflow.com/questions/6714046/c-linux-double-destruction-of-static-variable-linking-symbols-overlap&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Controlling symbol visibility: &lt;a href=&#34;http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/&#34;&gt;http://www.ibm.com/developerworks/aix/library/au-aix-symbol-visibility/&lt;/a&gt; and &lt;a href=&#34;http://www.akkadia.org/drepper/dsohowto.pdfdud&#34;&gt;http://www.akkadia.org/drepper/dsohowto.pdfdud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Enabling core dumps: &lt;a href=&#34;http://www.akadia.com/services/ora_enable_core.html&#34;&gt;http://www.akadia.com/services/ora_enable_core.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Show latest cron jobs
-&lt;code&gt;
-sudo grep -i cron /var/log/syslog|tail -2
-&lt;/code&gt;
--
-&lt;code&gt;
-sudo apt-get -o Dpkg::Options::=&amp;quot;--force-overwrite&amp;quot; install &amp;lt;package name&amp;gt;
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Firewall setup: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server&lt;/a&gt;
-&lt;code&gt;
-sudo ufw
-&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Activate newly created users group:
-&lt;code&gt;
-newgrp docker
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Easy memory usage overview: &lt;a href=&#34;https://github.com/crquan/coremem&#34;&gt;https://github.com/crquan/coremem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;C10K discussion: &lt;a href=&#34;http://www.kegel.com/c10k.html#nb.edge&#34;&gt;http://www.kegel.com/c10k.html#nb.edge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;List open file descriptors per pid:
-&lt;code&gt;
-lsof -p &amp;lt;pid&amp;gt;
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Number of open files on Linux: &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&#34;&gt;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;To allow su to set ulimit, edit and uncomment pam_limits.so in: /etc/pam.d/su&lt;/li&gt;
-&lt;li&gt;Set ulimits system wide, note that root permissions need to be set explicitly: /etc/security/limits.conf&lt;/li&gt;
-&lt;li&gt;Lookup open sockets:
-&lt;code&gt;
-while [ 1 ]; do sudo lsof -p `pidof &amp;lt;proc name&amp;gt;` | grep ESTABLISHED | wc; sysctl fs.file-nr; sleep 1; done
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;TCP backlog in Linux: &lt;a href=&#34;http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html&#34;&gt;http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TCP TIME_WAIT: &lt;a href=&#34;http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html&#34;&gt;http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TCP_NODELAY: &lt;a href=&#34;http://www.ibase.ru/devinfo/tcp_nodelay.txt&#34;&gt;http://www.ibase.ru/devinfo/tcp_nodelay.txt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;C10K problem: &lt;a href=&#34;http://www.kegel.com/c10k.html&#34;&gt;http://www.kegel.com/c10k.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Some benchmark rules: &lt;a href=&#34;https://www.mnot.net/blog/2011/05/18/http_benchmark_rules&#34;&gt;https://www.mnot.net/blog/2011/05/18/http_benchmark_rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ps cpu% vs top cpu%: &lt;a href=&#34;http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result&#34;&gt;http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Trace function calls: &lt;a href=&#34;http://ndevilla.free.fr/etrace/&#34;&gt;http://ndevilla.free.fr/etrace/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Set UTF-8 as default for Gnome terminal:
-&lt;code&gt;
-gconftool --set --type=string /apps/gnome-terminal/profiles/Default/encoding en_US.UTF-8
-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Socket reuse explained: &lt;a href=&#34;http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t&#34;&gt;http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;HTTP workgroup page: &lt;a href=&#34;http://httpwg.org/&#34;&gt;http://httpwg.org/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Change SUDO behavior:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;gt; visudo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Add to last line:
-&lt;code&gt;joost.meijles ALL=(ALL) NOPASSWD:ALL&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;SSHFS: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CCache with Memcached: &lt;a href=&#34;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&#34;&gt;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Linux select vs. poll vs. epoll: &lt;a href=&#34;http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/&#34;&gt;http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/&lt;/a&gt;
-POLLOUT explained: &lt;a href=&#34;http://stackoverflow.com/questions/12170037/when-to-use-pollout&#34;&gt;http://stackoverflow.com/questions/12170037/when-to-use-pollout&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.loic-yvonnet.com/articles/category/cpp/&#34;&gt;C++&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;14&lt;/sub&gt; multi-theading explained&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Wireshark</title>
-      <link>https://joostmeijles.github.io/doc/wireshark/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/wireshark/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.wireshark.org&#34;&gt;Wireshark&lt;/a&gt; is the world&amp;rsquo;s foremost network protocol analyzer.
-It lets you see what&amp;rsquo;s happening on your network at a microscopic level.
-It is the de facto (and often de jure) standard across many industries and educational institutions.&lt;/p&gt;
-
-&lt;p&gt;Enable non-root users to use network interfaces:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ sudo dpkg-reconfigure wireshark-common
-$ sudo adduser $USER wireshark
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

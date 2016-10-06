@@ -7,7 +7,7 @@
 	
 	<meta name="generator" content="Hugo 0.16" />
 	
-	<title>Tools &mdash; My documentation page</title>
+	<title>Sockets &mdash; My documentation page</title>
 	
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
@@ -23,24 +23,30 @@
 				<div class="bodywrapper">
 					<div class="body" role="main">
 						
-	<h1>Tools</h1>
+	<h1>Sockets</h1>
 	
-	<ul>
-<li><p>Check mounts:</p>
+	<p>To lookup open sockets:</p>
 
-<pre><code class="language-bash">$ df -h
-</code></pre></li>
+<pre><code class="language-bash">$ while [ 1 ]; do sudo lsof -p `pidof &lt;proc name&gt;` | grep ESTABLISHED | wc; sysctl fs.file-nr; sleep 1; done
+</code></pre>
 
-<li><p>Remote copy files using rsync</p>
+<p>How the Linux TCP backlog works is explained <a href="http://veithen.github.io/2014/01/01/how-tcp-backlog-works-in-linux.html">here</a>.</p>
 
-<pre><code class="language-bash">$ rsync -ave ssh from-machine:/from/dir/ /to/dir/
-</code></pre></li>
+<p>TCP states:</p>
+
+<ul>
+<li><a href="http://vincent.bernat.im/en/blog/2014-tcp-time-wait-state-linux.html">TCP TIME_WAIT</a></li>
+<li><a href="http://www.ibase.ru/devinfo/tcp_nodelay.txt">TCP_NODELAY</a></li>
 </ul>
 
-<p>To set UTF-8 as default for Gnome terminal:</p>
+<p>The <a href="http://www.kegel.com/c10k.html">C10K problem</a>.</p>
 
-<pre><code class="language-bash">$ gconftool --set --type=string /apps/gnome-terminal/profiles/Default/encoding en_US.UTF-8
-</code></pre>
+<p>Linux select vs. poll vs. epoll
+<a href="http://www.ulduzsoft.com/2014/01/select-poll-epoll-practical-difference-for-system-architects/">explained</a>.</p>
+
+<p>The POLLOUT event <a href="http://stackoverflow.com/questions/12170037/when-to-use-pollout">explained</a>.</p>
+
+<p>Socket reuse <a href="http://stackoverflow.com/questions/14388706/socket-options-so-reuseaddr-and-so-reuseport-how-do-they-differ-do-they-mean-t">explained</a>.</p>
 
 
 
@@ -53,7 +59,7 @@
 	<div class="sphinxsidebarwrapper">
 		<p class="logo">
 			<a href="https://joostmeijles.github.io/doc/">
-				<img class="logo" src="https://robohash.org/Tools" alt="Logo"/>
+				<img class="logo" src="https://robohash.org/Sockets" alt="Logo"/>
 				<h1 class="logo logo-name"></h1>
 			</a>
 		</p>

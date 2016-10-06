@@ -38,6 +38,49 @@ Debian package management is for example used for <a href="http://www.ubuntu.com
 <pre><code class="language-bash">$ dpkg-deb -I &lt;package&gt;
 </code></pre>
 
+<p>To force install using apt-get:</p>
+
+<pre><code class="language-bash">$ sudo apt-get -o Dpkg::Options::=&quot;--force-overwrite&quot; install &lt;package&gt;
+</code></pre>
+
+<p>How to setup the micro firewall: <a href="https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server">ufw</a></p>
+
+<pre><code class="language-bash">$ sudo ufw
+</code></pre>
+
+<p>Show latest ran cron jobs:</p>
+
+<pre><code class="language-bash">$ sudo grep -i cron /var/log/syslog | tail -2
+</code></pre>
+
+<p>Enabling core dumps <a href="http://www.akadia.com/services/ora_enable_core.html">explained here</a>.</p>
+
+<p>To change SUDO behavior:</p>
+
+<pre><code class="language-bash">$ visudo
+visudo&gt; username ALL=(ALL) NOPASSWD:ALL
+</code></pre>
+
+<p>To list open file descriptors per pid:</p>
+
+<pre><code class="language-bash">$ lsof -p &lt;pid&gt;
+</code></pre>
+
+<p>Number of open files on Linux: <a href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/</a></p>
+
+<p>To set ulimit system wide:</p>
+
+<pre><code class="language-bash">$ sudo vim /etc/security/limits.conf
+</code></pre>
+
+<p>An easy memory usage overview can be obtained using <a href="https://github.com/crquan/coremem">coremem</a>.</p>
+
+<p>The difference between <em>ps</em> vs <em>top</em> cpu usage  <a href="http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result">explained</a>.</p>
+
+<p>To trace function calls, <a href="http://ndevilla.free.fr/etrace/">etrace</a> can be used.</p>
+
+<p>Filesytem over SSH: <a href="https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh">SSHFS</a>.</p>
+
 
 
 						
@@ -65,6 +108,10 @@ Debian package management is for example used for <a href="http://www.ubuntu.com
 <ul>
 	
 	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/c&#43;&#43;/">C&#43;&#43;</a>
+	</li>
+	
+	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/debian/">Debian</a>
 	</li>
 	
@@ -78,6 +125,10 @@ Debian package management is for example used for <a href="http://www.ubuntu.com
 	
 	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/git/">Git</a>
+	</li>
+	
+	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/http/">HTTP</a>
 	</li>
 	
 	<li class="toctree-l1">
@@ -97,6 +148,10 @@ Debian package management is for example used for <a href="http://www.ubuntu.com
 	</li>
 	
 	<li class="toctree-l1">
+		<a class="reference internal" href="/doc/socket/">Sockets</a>
+	</li>
+	
+	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/sqlite/">Sqlite</a>
 	</li>
 	
@@ -110,10 +165,6 @@ Debian package management is for example used for <a href="http://www.ubuntu.com
 	
 	<li class="toctree-l1">
 		<a class="reference internal" href="/doc/tools/">Tools</a>
-	</li>
-	
-	<li class="toctree-l1">
-		<a class="reference internal" href="/doc/various/">Various</a>
 	</li>
 	
 	<li class="toctree-l1">
