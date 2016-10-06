@@ -46,7 +46,7 @@ Use [Docker Compose](http://docs.docker.com/compose/) to run multiple containers
 
 [Docker Kitematic](https://kitematic.com): a GUI for Docker containers. Is [Linux support](https://github.com/kitematic/kitematic/issues/49) still pending?
 
-[Netshare](http://netshare.containx.io/) a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.
+[Netshare](http://netshare.containx.io/) is a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.
 
 Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|https://github.com/spotify/docker-gc].
 ```bash

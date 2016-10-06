@@ -3,7 +3,7 @@ title: Synology
 menu: main
 ---
 
-Asterisk is no longer supported on DSM 6. It can however be installed using [Optware](https://github.com/Optware/Optware-ng).
+[Asterisk](http://www.asterisk.org) is no longer supported on DSM 6. It can however be installed using [Optware](https://github.com/Optware/Optware-ng).
 
 To maintain Asterisk while upgrading from DSM 5 to DSM 6:
 
