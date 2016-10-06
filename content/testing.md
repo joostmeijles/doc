@@ -4,6 +4,7 @@ menu: main
 ---
 
 - HTML response codes: http://httpstatus.es/
+
 - Redirect to stdout and terminate after 1 second after connection is idle:
 ```
 sudo socat -T1 TCP4-LISTEN:8080,reuseaddr STDOUT
@@ -26,5 +27,5 @@ sudo apt-get install wireshark
 sudo dpkg-reconfigure wireshark-common
 sudo adduser $USER wireshark
 ```
-- Wireshark ZeroMQ: https://github.com/whitequark/zmtp-wireshark
-- GMock: http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html
+- Wireshark ZeroMQ plugin: https://github.com/whitequark/zmtp-wireshark
+- Test C++ code using GMock: http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html
