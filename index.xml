@@ -304,6 +304,35 @@ and integrate systems more effectively.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8&lt;/a&gt; style guide for writing Python.&lt;/p&gt;
 
 &lt;p&gt;The difference between &lt;strong&gt;str&lt;/strong&gt; and &lt;strong&gt;repr&lt;/strong&gt; &lt;a href=&#34;http://brennerm.github.io/posts/python-str-vs-repr.html&#34;&gt;explained&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Small script to recursively grep in files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import fnmatch
+import os
+
+filePattern  = &#39;*.txt&#39;
+lineContains = &#39;paard&#39;
+
+def recursive_glob(rootdir=&#39;.&#39;, pattern=&#39;*&#39;):
+    return [os.path.join(looproot, filename)
+            for looproot, _, filenames in os.walk(rootdir)
+            for filename in filenames
+            if fnmatch.fnmatch(filename, pattern)]
+
+
+linesPerFile = []
+
+for filename in recursive_glob(pattern=filePattern):
+    lines = [line.strip() for line in open(filename) if lineContains in line]
+
+    for line in lines:
+        linesPerFile.append((line, filename))
+
+linesPerFile.sort(key=lambda tuple: tuple[0])
+
+for (line, file) in linesPerFile:
+    print(line + &#39; -&amp;gt; &#39; + file)
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
