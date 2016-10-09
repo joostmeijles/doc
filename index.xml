@@ -89,6 +89,8 @@ visudo&amp;gt; username ALL=(ALL) NOPASSWD:ALL
 &lt;p&gt;To trace function calls, &lt;a href=&#34;http://ndevilla.free.fr/etrace/&#34;&gt;etrace&lt;/a&gt; can be used.&lt;/p&gt;
 
 &lt;p&gt;Filesytem over SSH: &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh&#34;&gt;SSHFS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How to deamonize a process Linux: &lt;a href=&#34;http://codingfreak.blogspot.com/2012/03/daemon-izing-process-in-linux.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
