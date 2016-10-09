@@ -57,3 +57,5 @@ The difference between *ps* vs *top* cpu usage  [explained](http://unix.stackexc
 To trace function calls, [etrace](http://ndevilla.free.fr/etrace/) can be used.
 
 Filesytem over SSH: [SSHFS](https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh).
+
+How to deamonize a process Linux: [here](http://codingfreak.blogspot.com/2012/03/daemon-izing-process-in-linux.html)
