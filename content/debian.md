@@ -60,7 +60,7 @@ Filesytem over SSH: [SSHFS](https://www.digitalocean.com/community/tutorials/how
 
 How to deamonize a process Linux: [here](http://codingfreak.blogspot.com/2012/03/daemon-izing-process-in-linux.html)
 
-To change (to vim) crontab editor:
+To change crontab editor (to vim):
 ```bash
 vim $HOME/.selected_editor
 vim> SELECTED_EDITOR="/usr/bin/vim"
