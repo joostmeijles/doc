@@ -279,6 +279,11 @@ and useful commands that weren&amp;rsquo;t clear at first sight after reading th
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/nas			auto_nas	-nosuid
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Convert CDR (e.g. created using Disk Utility) to ISO:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ hdiutil convert from.cdr -format UDTO -o to.iso
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
