@@ -13,3 +13,8 @@ Use the newly created file in */etc/auto_master*:
 ```bash
 /nas			auto_nas	-nosuid
 ```
+
+Convert CDR (e.g. created using Disk Utility) to ISO:
+```bash
+$ hdiutil convert from.cdr -format UDTO -o to.iso
+```
