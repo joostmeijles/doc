@@ -3,12 +3,13 @@
 		<p class="logo">
 			<a href="{{ .Site.BaseURL }}">
 				{{ with .Site.Params.sidebar.logo -}}
-					<img class="logo" src="{{ printf "https://robohash.org/%s" $.Title }}" alt="Logo"/>
+					<!--img class="logo" src="{{ printf "https://robohash.org/%s" $.Title }}" alt="Logo"/-->
+					<img class="logo" src="{{ printf "http://api.qrserver.com/v1/create-qr-code/?data=%s&size=150x150" $.Title }}" alt="Logo"/>
 				{{- end }}
 				<h1 class="logo logo-name">{{ .Site.Params.name }}</h1>
 			</a>
 		</p>
-		
+
 		{{ with .Site.Params.description -}}
 		<p class="blurb">{{ . | markdownify }}</p>
 		{{- end }}
