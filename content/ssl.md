@@ -18,4 +18,4 @@ $ openssl s_client -connect test-mbimup.navinfo.com:443 -CAfile GlobalSign-Root-
 
 How to debug certificates can be read [here](http://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/).
 
-How to setup SSL with Nginx can be found [here](https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/789/37/certificate-installation-nginx).
+How to setup SSL with Nginx can be found [here](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04).
