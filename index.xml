@@ -25,6 +25,9 @@
 &lt;p&gt;Embedding text in an object file is described &lt;a href=&#34;http://www.linuxjournal.com/content/embedding-file-executable-aka-hello-world-version-5967&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Compiling C++ code using &lt;a href=&#34;http://ccache.samba.org/&#34;&gt;CCache&lt;/a&gt; with &lt;a href=&#34;http://memcached.org/&#34;&gt;Memcached&lt;/a&gt; can be found &lt;a href=&#34;https://gist.github.com/itensionanders/2bd0056027f8308d4cd8&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ nm -aC &amp;lt;library&amp;gt; | grep &#39; B &#39;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
