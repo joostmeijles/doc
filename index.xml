@@ -9,6 +9,16 @@
     <atom:link href="https://joostmeijles.github.io/doc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>C#</title>
+      <link>https://joostmeijles.github.io/doc/csharp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joostmeijles.github.io/doc/csharp/</guid>
+      <description>&lt;p&gt;Getting started with C# and multi-platform .NET Core setup: &lt;a href=&#34;https://www.microsoft.com/net/tutorials/csharp/getting-started&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;</title>
       <link>https://joostmeijles.github.io/doc/c&#43;&#43;/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -482,49 +492,6 @@ stop on runlevel [06]
 
 exec /opt/sbin/asterisk
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Testing</title>
-      <link>https://joostmeijles.github.io/doc/testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joostmeijles.github.io/doc/testing/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;HTML response codes: &lt;a href=&#34;http://httpstatus.es/&#34;&gt;http://httpstatus.es/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Redirect to stdout and terminate after 1 second after connection is idle:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo socat -T1 TCP4-LISTEN:8080,reuseaddr STDOUT
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Show local network traffic on port 8080:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo tcpflow -Ci lo port 8080
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Show local network traffic matching PUT:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo ngrep -d lo &#39;^PUT&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;TCP dump:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo tcpdump -i lo &#39;port 80&#39; -w -
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Wireshark:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo apt-get install wireshark
-$ sudo dpkg-reconfigure wireshark-common
-$ sudo adduser $USER wireshark
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Wireshark ZeroMQ plugin: &lt;a href=&#34;https://github.com/whitequark/zmtp-wireshark&#34;&gt;https://github.com/whitequark/zmtp-wireshark&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Test C++ code using GMock: &lt;a href=&#34;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&#34;&gt;http://yolyeng.blogspot.nl/2014/01/google-test-and-google-mock-using.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

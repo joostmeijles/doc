@@ -7,7 +7,7 @@
 	
 	<meta name="generator" content="Hugo 0.16" />
 	
-	<title>Docker &mdash; My documentation page</title>
+	<title>C# &mdash; My documentation page</title>
 	
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/alabaster.css" type="text/css" />
 	<link rel="stylesheet" href="https://joostmeijles.github.io/doc/css/highlight.css" type="text/css" />
@@ -23,58 +23,9 @@
 				<div class="bodywrapper">
 					<div class="body" role="main">
 						
-	<h1>Docker</h1>
+	<h1>C#</h1>
 	
-	<p><a href="http://www.docker.com">Docker</a> is the world’s leading software containerization platform.</p>
-
-<p>To let Docker use another path for the images and containers:</p>
-
-<pre><code class="language-bash">$ vim /etc/default/docker
-vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
-</code></pre>
-
-<p>To interactively run a custom program, e.g. /bin/bash, in a running container:</p>
-
-<pre><code class="language-bash">$ docker exec -ti &lt;container&gt; /bin/bash
-</code></pre>
-
-<p>To obtain the host name and port number of a container:</p>
-
-<pre><code class="language-bash">$ docker inspect --format='{{(index (index .NetworkSettings.Ports &quot;80/tcp&quot;) 0).HostPort}}' &lt;container&gt;
-</code></pre>
-
-<p>To link containers together:</p>
-
-<pre><code class="language-bash">$ docker run --name &lt;container&gt; --link &lt;container&gt;:&lt;image&gt; -P -d &lt;image&gt;
-</code></pre>
-
-<p>To list all running and stopped containers:</p>
-
-<pre><code class="language-bash">$ docker ps -a
-</code></pre>
-
-<p>To stop all running containers:</p>
-
-<pre><code class="language-bash">$ docker ps -q | xargs docker stop
-</code></pre>
-
-<p>To clean up all containers and images:</p>
-
-<pre><code class="language-bash">$ docker ps -q -a | xargs docker rm -v &amp;&amp; docker images -q | xargs docker rmi -f
-</code></pre>
-
-<p>A large sheet with common Docker commands can be found <a href="https://github.com/wsargent/docker-cheat-sheet">here</a>.</p>
-
-<p>Use <a href="http://docs.docker.com/compose/">Docker Compose</a> to run multiple containers together.</p>
-
-<p><a href="https://kitematic.com">Docker Kitematic</a>: a GUI for Docker containers. Is <a href="https://github.com/kitematic/kitematic/issues/49">Linux support</a> still pending?</p>
-
-<p><a href="http://netshare.containx.io/">Netshare</a> is a Docker plugin to mount network storage (NFS, AWS EFS, CIFS) in a container.</p>
-
-<p>Not running (completed) containers and unused images will stay on your system until removed this will take up (quite) some disk space. To remove unused Docker images and completed containers use [Docker-GC|<a href="https://github.com/spotify/docker-gc">https://github.com/spotify/docker-gc</a>].</p>
-
-<pre><code class="language-bash">$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
-</code></pre>
+	<p>Getting started with C# and multi-platform .NET Core setup: <a href="https://www.microsoft.com/net/tutorials/csharp/getting-started">here</a></p>
 
 
 
@@ -88,7 +39,7 @@ vim&gt; DOCKER_OPTS=&quot;-g /volumes3/docker&quot;
 		<p class="logo">
 			<a href="https://joostmeijles.github.io/doc/">
 				
-					<img class="logo" src="http://api.qrserver.com/v1/create-qr-code/?data=Docker&amp;size=150x150" alt="Logo"/>
+					<img class="logo" src="http://api.qrserver.com/v1/create-qr-code/?data=C#&amp;size=150x150" alt="Logo"/>
 				<h1 class="logo logo-name"></h1>
 			</a>
 		</p>
